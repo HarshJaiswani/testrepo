@@ -1,0 +1,287 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #050d22;
+}
+.team {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.abtCircle {
+  width: 50%;
+  height: 100%;
+}
+.peoples {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.people {
+  width: 140px;
+  height: 140px;
+  background-color: #112240;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: -10px 10px 20px -15px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: wheat;
+}
+.people img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background-color: #112240;
+  transform: translateX(-90px) translateY(-50px);
+}
+.circle > span:nth-child(1) {
+  font-size: 2rem;
+  margin: 10px 0px;
+  font-weight: bold;
+  font-family: cursive;
+  color: wheat;
+}
+.circle > span:nth-child(2) {
+  font-size: 1.2rem;
+  width: 70%;
+  padding-left: 70px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: gray;
+  text-align: justify;
+}
+.circle > span:nth-child(2) button {
+  padding: 5px 20px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  transition: all 0.4s;
+  display: block;
+}
+.circle > span:nth-child(2) button:hover {
+  transform: scale(0.95);
+}
+.abtCompany {
+  padding: 0px 20px;
+  margin: 40px auto;
+  width: 90%;
+}
+.abtCompany span {
+  font-family: cursive;
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: 1.2rem;
+  color: whitesmoke;
+}
+.abtCompany ul {
+  margin: 20px 0px;
+  width: 60%;
+  padding: 0px 20px;
+  list-style-type: disc;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+.abtCompany ul li:nth-child(even) {
+  margin: 10px 0px;
+  color: rgb(21, 209, 209);
+}
+.abtCompany ul li:nth-child(odd) {
+  margin: 10px 0px;
+  color: rgb(16, 158, 158);
+}
+.call {
+  background-color: rgb(209, 213, 219);
+  color: gray;
+  font-size: 0.9rem;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+.call:hover {
+  cursor: pointer;
+}
+.abtMe {
+  padding: 30px;
+  margin: 50px 0px;
+  width: 100%;
+  display: flex;
+}
+.abtMe div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.abtMe div img {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0px 20px 30px -15px green;
+}
+.abtMe span {
+  position: relative;
+  padding: 20px 60px;
+  font-family: monospace;
+  font-size: 1rem;
+  display: inline-block;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  text-align: center;
+  word-spacing: 2px;
+  color: whitesmoke;
+}
+.leftQuote {
+  font-size: 2rem;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: orange;
+}
+.rightQuote {
+  font-size: 2rem;
+  color: orange;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.history {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.mySkills {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.mySkills > div:nth-child(1) {
+  margin: 20px 0px;
+}
+.abtMeWrap {
+  width: 100%;
+  display: flex;
+}
+.historyHead {
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .team {
+    flex-direction: column;
+  }
+  .peoples {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) and (min-width: 400px) {
+  .team {
+    flex-direction: column;
+  }
+  .peoples {
+    width: 100%;
+  }
+  .abtCompany ul {
+    width: 100%;
+  }
+  .abtMe {
+    flex-direction: column;
+  }
+  .abtMe div {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .abtMe span {
+    width: 100%;
+  }
+  .abtMeWrap {
+    flex-direction: column;
+  }
+  .mySkills {
+    flex-direction: column;
+    width: 100%;
+  }
+  .history {
+    width: 50%;
+    margin: 50px auto;
+  }
+  .mySkills > div:nth-child(2) {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .team {
+    flex-direction: column;
+  }
+  .peoples {
+    width: 100%;
+  }
+  .abtCompany ul {
+    width: 100%;
+  }
+  .abtMe {
+    flex-direction: column;
+  }
+  .abtMe div {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .abtMe span {
+    width: 100%;
+  }
+  .abtMeWrap {
+    flex-direction: column;
+  }
+  .mySkills {
+    flex-direction: column;
+    width: 100%;
+  }
+  .history {
+    width: 60%;
+    margin-top: 50px;
+  }
+  .mySkills > div:nth-child(2) {
+    width: 80%;
+    margin: auto;
+  }
+  .abtMe span {
+    padding: 30px 10px;
+  }
+  .circle > span:nth-child(2) {
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: 1.2rem;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+}

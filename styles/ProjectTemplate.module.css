@@ -1,0 +1,64 @@
+.project {
+  margin: 50px 0px;
+  color: #a8b2d1;
+  display: flex;
+  width: 80%;
+  height: 60vh;
+  font-family: cursive;
+}
+.projectImg {
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 1;
+}
+.projectImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 1;
+  opacity: 0.4;
+}
+.projectImg img:hover {
+  opacity: 1;
+}
+.projectDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 40%;
+  height: 100%;
+}
+.projectNum {
+  letter-spacing: 3px;
+  color: #64ffda;
+}
+.projectName {
+  color: #ccd6f6;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.projectDescp {
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 110%;
+  height: fit-content;
+  background-color: #112240;
+  z-index: 5;
+}
+.projectDescp:hover {
+  box-shadow: 0px 20px 30px -15px rgba(2, 12, 27, 0.7);
+}
+.projectTech span {
+  margin: 0px 10px;
+}
+.projectLinks {
+  font-size: 1.5rem;
+  display: flex;
+}
+.projectLinks a:hover,
+.projectName a:hover {
+  color: #64ffda;
+}

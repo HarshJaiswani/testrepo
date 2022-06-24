@@ -1,0 +1,41 @@
+.nav {
+  width: 100%;
+  padding: 20px;
+  height: fit-content;
+  display: flex;
+  z-index: 100;
+  justify-content: space-evenly;
+  align-items: center;
+  background: transparent;
+}
+.navIcons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 15px;
+  padding: 3px 10px;
+  background-color: #112240;
+  box-shadow: 0px 2px 7px black;
+  transition: all 0.4s;
+}
+.navIcons img {
+  width: 30px;
+}
+.navIcons span {
+  margin: 0px 5px;
+  color: white;
+  font-family: cursive;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.navIcons:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  transition: all 0.09s;
+  box-shadow: none;
+}
+@media screen and (max-width: 780px) {
+  .nav {
+    display: none;
+  }
+}

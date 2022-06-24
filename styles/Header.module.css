@@ -1,0 +1,117 @@
+.mainHead{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -20;
+  background: rgb(9, 25, 33);
+  background: linear-gradient(
+    144deg,
+    rgba(9, 25, 33, 1) 0%,
+    rgba(121, 9, 105, 1) 71%,
+    rgba(255, 0, 95, 1) 100%
+  );
+}
+.head {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+}
+.headSide1,
+.headSide2 {
+  padding: 20px;
+  padding-top: 50px;
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headSide1 {
+  font-size: 4rem;
+}
+.headSide2 {
+  padding-top: 100px;
+}
+.quotes {
+  width: 50%;
+  color: white;
+  border-radius: 5px;
+  padding: 50px 30px;
+  background-color: #112240;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-family: 1.2rem;
+  position: relative;
+}
+.quoteLeft {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: orange;
+}
+.quoteRight {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: orange;
+}
+.quoteAuthor {
+  width: fit-content;
+  padding: 5px 20px;
+  color: white;
+  background-color: orange;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  text-align: center;
+  transform: translateY(-15px);
+}
+@media screen and (max-width: 780px) and (min-width: 640px) {
+  .quotes{
+    width: 80%;
+    padding: 50px 20px;
+  }
+}
+@media screen and (max-width: 640px) and (min-width: 400px) {
+  .quotes{
+    width: 80%;
+    padding: 50px 20px;
+  }
+  .head{
+    flex-direction: column;
+  }
+  .headSide1{
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 3rem;
+    margin: 50px 0px;
+  }
+  .headSide1,
+  .headSide2{
+    height: fit-content;
+    width: 100%;
+    padding-top: 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .quotes{
+    width: 80%;
+    padding: 50px 20px;
+  }
+  .head{
+    flex-direction: column;
+  }
+  .headSide1{
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 2rem;
+    margin: 30px 0px;
+  }
+  .headSide1,
+  .headSide2{
+    height: fit-content;
+    width: 100%;
+    padding-top: 0px;
+  }
+}

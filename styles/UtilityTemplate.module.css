@@ -1,0 +1,44 @@
+.utilityBlock {
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #112240;
+  box-shadow: 0px 10px 20px -15px black;
+  transition: all 0.4s;
+}
+.utilityBlock:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head img {
+  width: 50px;
+  margin: 30px;
+}
+.title {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  margin: 10px 0px;
+  letter-spacing: 1px;
+}
+.descp {
+  text-align: center;
+  color: gray;
+}
+@media screen and (max-width: 400px) {
+  .utilityBlock {
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+  }
+  .utilityBlock:hover {
+    transform: scale(1);
+  }
+}

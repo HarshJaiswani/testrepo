@@ -1,0 +1,26 @@
+.projects {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #050d22;
+}
+.projectWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading2 {
+  margin: 50px;
+  text-align: center;
+  color: #ccd6f6;
+  font-size: 2rem;
+}
+.otherProjects {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

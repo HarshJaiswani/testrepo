@@ -1,0 +1,72 @@
+.articleBlock {
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30%;
+  min-height: 300px;
+  background-color: #112240;
+  box-shadow: 0px 20px 30px -15px black;
+  transition: all 0.4s;
+}
+.articleBlock:hover {
+  transform: translateY(-10px);
+}
+.articleDate {
+  margin: 5px 0px;
+  width: fit-content;
+  padding: 5px 20px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  background-color: #050d22;
+  color: gray;
+  letter-spacing: 1px;
+}
+.link {
+  color: orange;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: all 2s;
+}
+.arrow {
+  font-size: 1.5rem;
+  display: inline-block;
+  transform: translateX(-5px);
+}
+.link:hover .arrow {
+  transform: translateX(0px);
+}
+.articleTitle {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-family: cursive;
+}
+.articleDescp {
+  color: #8c8c8e;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin: 10px 0px;
+}
+@media screen and (max-width: 1300px) and (min-width: 400px) {
+  .articleBlock {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .articleBlock {
+    width: 100%;
+    margin: 10px;
+  }
+  .link:hover .arrow {
+    transform: translateX(-5px);
+  }
+  .articleBlock:hover {
+    transform: translateY(0px);
+  }
+}

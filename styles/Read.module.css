@@ -1,0 +1,43 @@
+.read {
+  padding-top: 50px;
+  width: 100%;
+  background-color: #050d22;
+}
+.head {
+  width: 80%;
+  margin: auto;
+}
+.head h1 {
+  margin-bottom: 20px;
+  background: -webkit-linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.head > p {
+  margin: auto;
+  width: 90%;
+  font-family: monospace;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  color: #8193b2;
+  font-size: 1.2rem;
+}
+.articleCarousal {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .head > p {
+    font-size: 1rem;
+  }
+}

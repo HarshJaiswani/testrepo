@@ -1,0 +1,50 @@
+.navClick {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 100;
+  box-shadow: 0px 0px 10px black;
+}
+.navClick:hover {
+  cursor: pointer;
+}
+.moveableNav div {
+  transition: all 0.4s;
+  position: fixed;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  z-index: 100;
+  box-shadow: 0px 0px 10px black;
+}
+.moveableNav div:nth-child(1) {
+  bottom: 100px;
+  z-index: 9;
+}
+.moveableNav div:nth-child(2) {
+  bottom: 170px;
+  z-index: 8;
+}
+.moveableNav div:nth-child(3) {
+  bottom: 240px;
+  z-index: 7;
+}
+.moveableNav div:nth-child(4) {
+  bottom: 310px;
+  z-index: 6;
+}
+.moveableNav div:nth-child(5) {
+  bottom: 380px;
+  z-index: 5;
+}

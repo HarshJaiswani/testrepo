@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+.post {
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #20202a;
+  font-family: "Poppins", sans-serif;
+}
+.head {
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2b35;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 20px;
+  color: white;
+  font-family: cursive;
+}
+.date {
+  padding: 5px 20px;
+  margin: 20px;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  color: gray;
+  background-color: #20202a;
+}
+.blog {
+  border-radius: 5px;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  background-color: #2b2b35;
+  color: white;
+}
+.blog > span {
+  margin: 20px 10px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: 1rem;
+  display: block;
+}
+.blogQuote {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background-color: #20202a;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: cursive;
+}
+.quoteLeft {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: grey;
+}
+.quoteRight {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: grey;
+}
+.posted {
+  margin: 20px 10px;
+}
+.posted > span {
+  margin: 0px 5px;
+  color: orange;
+}
+.tags {
+  margin: 10px;
+}
+.tags > span {
+  margin: 20px 10px;
+  padding: 1px 10px;
+  border: 1px solid orange;
+  border-radius: 5px;
+  color: orange;
+}
+.share {
+  margin: 20px 10px;
+}
+.share > span {
+  color: gray;
+  margin: 0px 10px;
+}
+.share > span:hover {
+  color: white;
+}
+.postNavigate {
+  padding: 20px;
+  margin: auto;
+  width: 80%;
+  background-color: #2b2b35;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.postNavigate > div {
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+.postNavigate > span {
+  font-size: 1.2rem;
+  transition: all 0.4s;
+  color: orange;
+}
+.next {
+  transform: translateX(-8px);
+}
+.prev {
+  transform: translateX(8px);
+}
+.postNavigate span:hover .next,
+.postNavigate span:hover .prev {
+  transform: translateX(0px);
+}
+.feedBack{
+  background-color: #2b2b35;
+  border-radius: 5px;
+  width: 80%;
+  margin: 20px auto;
+  /* padding: 10px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.feedBack div{
+  margin: 20px 10px;
+  color: cyan;
+  font-size: 1.2rem;
+}
+.feedBack div span{
+  color: gray;
+}
+.feedBack button {
+  margin: 10px 0px;
+  background-color: orange;
+  border-radius: 5px;
+  padding: 5px 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+@media screen and (max-width: 800px) and (min-width: 500px) {
+  .feedBack{
+    flex-direction: column;
+  }
+  .feedBack div{
+    margin: 20px 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .post {
+    padding: 20px 0px;
+  }
+  .blog {
+    padding: 10px;
+  }
+  .postNavigate {
+    padding: 10px;
+  }
+  .postNavigate > div {
+    font-size: 0.9rem;
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
+  .postNavigate > span {
+    font-size: 0.9rem;
+  }
+  .feedBack{
+    flex-direction: column;
+  }
+  .feedBack div{
+    margin: 20px 10px;
+  }
+}
