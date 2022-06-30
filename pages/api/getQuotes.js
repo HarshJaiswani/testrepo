@@ -1,7 +1,7 @@
 import * as fs from "fs";
 
 export default function handler(req, res) {
-    fs.readFile('Quotes.json','utf-8',(err,data)=>{
+    fs.readFile('./Quotes.json','utf-8',(err,data)=>{
         if (err) {
             res.status(400).json({error:"No such File or Directory"});
         }
