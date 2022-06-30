@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useRef, useState } from "react";
 import { BsFillFileEarmarkTextFill, BsCloudArrowUp } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";

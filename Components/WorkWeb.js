@@ -24,7 +24,7 @@ const WorkWeb = () => {
           </div>
           <div>If you are intrested you can fill the form below!</div>
         </div>
-        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfm-REY_urtvQ5-AwIXBKUixvSKAD-8Nrgt83zaoYg15tshNA/viewform?usp=sf_link">
+        <Link href="https://forms.gle/cxo8s44xseoEDAFi6">
           <a
             className={styles.formlink}
             style={{
@@ -60,7 +60,7 @@ const WorkWeb = () => {
             cards you can get now!
           </div>
         </div>
-        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfm-REY_urtvQ5-AwIXBKUixvSKAD-8Nrgt83zaoYg15tshNA/viewform?usp=sf_link">
+        <Link href="https://forms.gle/cxo8s44xseoEDAFi6">
           <a
             className={styles.formlink}
             style={{

@@ -29,7 +29,7 @@ const MyWork = () => {
             and do the same on social media of your choice with the tag{" "}
             <span style={{ color: "green" }}>#legrosh</span>
           </p>
-          <Link href="/">Today&#39;s Work</Link>
+          <Link href="https://www.linkedin.com/in/harsh-jaiswani-26108823b/">Today&#39;s Work</Link>
         </div>
       </div>
     </section>

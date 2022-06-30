@@ -6,6 +6,7 @@ import { IoPersonCircle } from "react-icons/io5";
 import Heading from "../Components/Heading";
 import { TagCloud } from "react-tagcloud";
 import Footer from "../Components/Footer";
+import Link from "next/link";
 
 const About = () => {
   const data = [
@@ -28,6 +29,7 @@ const About = () => {
           tagLine="It's always the team which builds a company!"
           note="People dont remeber how you treated them instead how you made them feel , so it will be our pleasure to make you feel good. Hope We Did ! "
         />
+        <div className={styles.contact}>Mail Us at : <Link href="mailto:legrosh2021@gmail.com"><a>legrosh2021@gmail</a></Link></div>
         <div className={styles.abtCompany}>
           <span>
             Welcome Or Welcome back to the place , LeGroSh is the place where we
@@ -44,7 +46,7 @@ const About = () => {
             </li>
             <li>
               Being a Listners - You can{" "}
-              <a className={styles.call}>book a call</a> with us where we can
+              <Link href="https://forms.gle/cxo8s44xseoEDAFi6"><a className={styles.call}>book a call</a></Link> with us where we can
               discuss whatever you want and we will try and help you as much as
               we can or you can just share whatever you want and feel lighter
             </li>

@@ -25,7 +25,7 @@ const Ask = () => {
             get back to you within 48 to 72 hours
           </p>
         </div>
-        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfm-REY_urtvQ5-AwIXBKUixvSKAD-8Nrgt83zaoYg15tshNA/viewform?usp=sf_link">
+        <Link href="https://forms.gle/cxo8s44xseoEDAFi6">
           <a className={styles.formlink}>Fill Form Here</a>
         </Link>
       </div>

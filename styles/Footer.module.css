@@ -1,0 +1,10 @@
+.foot{
+    width: 100%;
+    padding: 10px 0px;
+    /* height: 110vh; */
+    background-color: #050d22;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}

@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { BsEyeglasses } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import bcryptjs from "bcryptjs";
 
 const AdminLogin = ({ setLoggedIn }) => {
@@ -21,11 +22,11 @@ const AdminLogin = ({ setLoggedIn }) => {
 
   const checkPassCode = (user, pass) => {
     let passObj = {
-      admin: "$2a$10$WkWA.3jY4du6LTqidWy9gu8wdneW/dweeJL7UkY4CL8LsByAoSPpa"
+      admin: "$2a$10$WkWA.3jY4du6LTqidWy9gu8wdneW/dweeJL7UkY4CL8LsByAoSPpa",
     };
     for (let key in passObj) {
       if (key == user) {
-        if (bcryptjs.compareSync(pass,passObj[user])) {
+        if (bcryptjs.compareSync(pass, passObj[user])) {
           setLoggedIn(true);
           toast.success("SignedIn Succesfully ! - Redirecting...", {
             position: "bottom-left",
@@ -79,7 +80,11 @@ const AdminLogin = ({ setLoggedIn }) => {
               Login To Proceed
             </h2>
           </div>
-          <form className="mt-8 space-y-6" method="POST" onSubmit={(e) => e.preventDefault()}>
+          <form
+            className="mt-8 space-y-6"
+            method="POST"
+            onSubmit={(e) => e.preventDefault()}
+          >
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="username" className="sr-only">

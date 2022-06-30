@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className="w-full p-10 text-center sm:text-3xl text-white bg-[#050d22] text-xl">
-      Keep Learning &nbsp; & &nbsp; Keep Sharing
+    <div className={styles.foot}>
+      <span>Keep Learning &nbsp; & &nbsp; Keep Sharing</span> 
     </div>
   );
 };
