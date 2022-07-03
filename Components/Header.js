@@ -1,22 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "../styles/Header.module.css";
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 import NavBar from "./NavBar";
 
-const Header = () => {
-  const [quote, setQuote] = useState("");
-  useEffect(() => {
-    fetchQuote(randomNumber(0, 1642));
-  }, []);
-  const fetchQuote = async (a) => {
-    const data = await fetch("/api/getQuotes");
-    const quotes = await data.json();
-    setQuote(quotes[a]);
-  };
-  const randomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
+const Header = (props) => {
+  console.log(props)
   return (
     <div className={styles.mainHead}>
       <NavBar />
@@ -40,16 +29,17 @@ const Header = () => {
             <span className={styles.quoteLeft}>
               <FaQuoteLeft className="inline-block text-lg mx-2 " />
             </span>
-            {quote.text}
+            {props.quote.quote}
             <span className={styles.quoteRight}>
               <FaQuoteRight className="inline-block text-lg mx-2 " />
             </span>
           </div>
-          <div className={styles.quoteAuthor}>{quote.author}</div>
+          <div className={styles.quoteAuthor}>{props.quote.author}</div>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default Header;

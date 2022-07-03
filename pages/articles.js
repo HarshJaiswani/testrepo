@@ -3,7 +3,7 @@ import ArticleBlockTemplate from '../Components/ArticleBlockTemplate'
 import Heading from '../Components/Heading'
 import styles from "../styles/Articles.module.css"
 
-const Articles = () => {
+const Articles = (props) => {
   const article = {
     title: 'My First Tech Article',
     descp: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic repellendus, maxime, eius perspiciatis nisi ipsum ut nihil sit beatae cumque incidunt officia odio est?",
@@ -27,6 +27,12 @@ const Articles = () => {
       </div>
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  return {
+    props: {abcd:"hllo"},
+  }
 }
 
 export default Articles

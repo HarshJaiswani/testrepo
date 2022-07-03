@@ -9,11 +9,11 @@ import Footer from "../Components/Footer"
 import Link from "next/link"
 import Recommendations from '../Components/Recommendations'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
     {/* <NavBar /> */}
-    <Header />
+    <Header quote={props.quote} />
     <MyWork />
     <Read />
     <WorkWeb />
@@ -23,4 +23,12 @@ export default function Home() {
     <Footer />
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  const data = await fetch(`http://localhost:3000/api/getQuotes`);
+  const quote = await data.json();
+  return{
+    props : {quote}
+  }
 }

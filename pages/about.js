@@ -8,7 +8,7 @@ import { TagCloud } from "react-tagcloud";
 import Footer from "../Components/Footer";
 import Link from "next/link";
 
-const About = () => {
+const About = (props) => {
   const data = [
     { value: "JavaScript", count: 38 },
     { value: "ReactJs", count: 30 },
@@ -217,5 +217,11 @@ const About = () => {
     </>
   );
 };
+
+export async function getServerSideProps(context) {
+  return {
+    props: {abcd:"hllo"}
+  }
+}
 
 export default About;
