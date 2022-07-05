@@ -23,7 +23,7 @@ const Articles = (props) => {
 }
 
 export async function getServerSideProps(context) {
-  const data = await fetch(`${process.env.host}/api/getBlog?slug=article`);
+  const data = await fetch(`https://legrosh.vercel.app/api/getBlog?slug=article`);
   const blog = await data.json();
   return{
     props : {blog}

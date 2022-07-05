@@ -26,9 +26,9 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const data = await fetch(`${process.env.host}/api/getQuotes`);
+  const data = await fetch(`https://legrosh.vercel.app/api/getQuotes`);
   const quote = await data.json();
-  const data2 = await fetch(`${process.env.host}/api/getBlog?slug=article`);
+  const data2 = await fetch(`https://legrosh.vercel.app/api/getBlog?slug=article`);
   const blog = await data2.json();
 
   return{
