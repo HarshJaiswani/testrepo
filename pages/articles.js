@@ -23,7 +23,7 @@ const Articles = (props) => {
 }
 
 export async function getServerSideProps(context) {
-  const data = await fetch(`http://localhost:3000/api/getBlog?slug=article`);
+  const data = await fetch(`public/api/getBlog?slug=article`);
   const blog = await data.json();
   return{
     props : {blog}
