@@ -29,7 +29,7 @@ const Header = (props) => {
             <span className={styles.quoteLeft}>
               <FaQuoteLeft className="inline-block text-lg mx-2 " />
             </span>
-            {props.quote.quote}
+            {props.quote.text}
             <span className={styles.quoteRight}>
               <FaQuoteRight className="inline-block text-lg mx-2 " />
             </span>

@@ -2,15 +2,7 @@ import React from "react";
 import styles from "../styles/Read.module.css";
 import ArticleBlockTemplate from "../Components/ArticleBlockTemplate";
 
-const Read = () => {
-  const article = {
-    title: "My First Tech Article",
-    descp:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic repellendus, maxime, eius perspiciatis nisi ipsum ut nihil sit beatae cumque incidunt officia odio est?",
-    link: "/",
-    date: "25th september 2022",
-    category: "Technology",
-  };
+const Read = (props) => {
   return (
     <div className={styles.read}>
       <div className={styles.head}>
@@ -21,12 +13,12 @@ const Read = () => {
         </p>
       </div>
       <div className={styles.articleCarousal}>
-        <ArticleBlockTemplate article={article} />
-        <ArticleBlockTemplate article={article} />
-        <ArticleBlockTemplate article={article} />
-        <ArticleBlockTemplate article={article} />
-        <ArticleBlockTemplate article={article} />
-        <ArticleBlockTemplate article={article} />
+        <ArticleBlockTemplate article={props.blog} />
+        <ArticleBlockTemplate article={props.blog} />
+        <ArticleBlockTemplate article={props.blog} />
+        <ArticleBlockTemplate article={props.blog} />
+        <ArticleBlockTemplate article={props.blog} />
+        <ArticleBlockTemplate article={props.blog} />
       </div>
     </div>
   );
