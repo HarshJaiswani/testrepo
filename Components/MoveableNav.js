@@ -18,7 +18,7 @@ const MoveableNav = () => {
           show ? setShow(false) : setShow(true);
         }}
       >
-        <Image src={`/Assets/3d/nav.png`} alt="" priority="true" />
+        <Image src={`/Assets/3d/nav.png`} alt="" priority="true" width={50} height={50} />
       </div>
       <div className={styles.moveableNav}>
         <div
@@ -32,7 +32,7 @@ const MoveableNav = () => {
         >
           <Link href="/projects">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/projects.png" alt="" priority="true" />
+              <Image src="/Assets/3d/projects.png" alt="" priority="true" width={50} height={50} />
             </a>
           </Link>
         </div>
@@ -47,7 +47,7 @@ const MoveableNav = () => {
         >
           <Link href="/utilities">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/utilities.png" alt="" priority="true" />
+              <Image src="/Assets/3d/utilities.png" alt="" priority="true" width={50} height={50} />
             </a>
           </Link>
         </div>
@@ -60,7 +60,7 @@ const MoveableNav = () => {
         >
           <Link href="/articles">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/articles.png" alt="" priority="true" />
+              <Image src="/Assets/3d/articles.png" alt="" priority="true" width={50} height={50} />
             </a>
           </Link>
         </div>
@@ -75,7 +75,7 @@ const MoveableNav = () => {
         >
           <Link href="/about">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/about.png" alt="" priority="true" />
+              <Image src="/Assets/3d/about.png" alt="" priority="true" width={50} height={50} />
             </a>
           </Link>
         </div>
@@ -90,7 +90,7 @@ const MoveableNav = () => {
         >
           <Link href="/">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/hash.png" alt="" priority="true" />
+              <Image src="/Assets/3d/hash.png" alt="" priority="true" width={50} height={50} />
             </a>
           </Link>
         </div>

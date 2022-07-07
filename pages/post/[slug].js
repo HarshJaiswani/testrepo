@@ -24,7 +24,7 @@ const Post = (props) => {
         setBlog(parsed);
         // setPostNo(parsed.sno);
       });
-  }, [router.isReady]);
+  }, [router.isReady , router.query]);
 //   const fetchBlog = async (no) => {
 //     if (postNo == 1) {
 //         toast('You are on first article!', {
