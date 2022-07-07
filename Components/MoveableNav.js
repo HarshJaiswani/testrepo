@@ -17,7 +17,7 @@ const MoveableNav = () => {
           show ? setShow(false) : setShow(true);
         }}
       >
-        <img src={`public/Assets/3d/nav.png`} alt="" />
+        <img src={`/Assets/3d/nav.png`} alt="" />
       </div>
       <div className={styles.moveableNav}>
         <div
@@ -31,7 +31,7 @@ const MoveableNav = () => {
         >
           <Link href="/projects">
             <a onClick={() => setShow(false)}>
-              <img src="public/Assets/3d/projects.png" alt="" />
+              <img src="/Assets/3d/projects.png" alt="" />
             </a>
           </Link>
         </div>
@@ -46,7 +46,7 @@ const MoveableNav = () => {
         >
           <Link href="/utilities">
             <a onClick={() => setShow(false)}>
-              <img src="public/Assets/3d/utilities.png" alt="" />
+              <img src="/Assets/3d/utilities.png" alt="" />
             </a>
           </Link>
         </div>
@@ -59,7 +59,7 @@ const MoveableNav = () => {
         >
           <Link href="/articles">
             <a onClick={() => setShow(false)}>
-              <img src="public/Assets/3d/articles.png" alt="" />
+              <img src="/Assets/3d/articles.png" alt="" />
             </a>
           </Link>
         </div>
@@ -74,7 +74,7 @@ const MoveableNav = () => {
         >
           <Link href="/about">
             <a onClick={() => setShow(false)}>
-              <img src="public/Assets/3d/about.png" alt="" />
+              <img src="/Assets/3d/about.png" alt="" />
             </a>
           </Link>
         </div>
@@ -89,7 +89,7 @@ const MoveableNav = () => {
         >
           <Link href="/">
             <a onClick={() => setShow(false)}>
-              <img src="public/Assets/3d/hash.png" alt="" />
+              <img src="/Assets/3d/hash.png" alt="" />
             </a>
           </Link>
         </div>

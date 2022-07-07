@@ -31,7 +31,7 @@
 .moveableNav div:nth-child(1) {
   bottom: 100px;
   z-index: 9;
-}
+} 
 .moveableNav div:nth-child(2) {
   bottom: 170px;
   z-index: 8;

@@ -11,7 +11,7 @@ const MyWork = () => {
       </div>
       <div className={styles.abt}>
         <Image
-          src="public/Assets/illustration.jpg"
+          src="/Assets/illustration.jpg"
           width={230}
           height={225}
           alt="illustration"

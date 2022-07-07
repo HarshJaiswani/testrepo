@@ -6,7 +6,7 @@ const Heading = (props) => {
   return (
     <>
       <h2 className={styles.heading}>
-        <img src={`public/Assets/3d/${props.img}.png`} alt="" />
+        <img src={`/Assets/3d/${props.img}.png`} alt="" />
         <span>{props.name}</span>
       </h2>
       <div className={styles.tagLine}>{props.tagLine}</div>
