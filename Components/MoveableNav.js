@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "../styles/MoveableNav.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image"; 
 
 const MoveableNav = () => {
   const [show, setShow] = useState(false);
@@ -17,7 +18,7 @@ const MoveableNav = () => {
           show ? setShow(false) : setShow(true);
         }}
       >
-        <img src={`/Assets/3d/nav.png`} alt="" />
+        <Image src={`/Assets/3d/nav.png`} alt="" priority="true" />
       </div>
       <div className={styles.moveableNav}>
         <div
@@ -31,7 +32,7 @@ const MoveableNav = () => {
         >
           <Link href="/projects">
             <a onClick={() => setShow(false)}>
-              <img src="/Assets/3d/projects.png" alt="" />
+              <Image src="/Assets/3d/projects.png" alt="" priority="true" />
             </a>
           </Link>
         </div>
@@ -46,7 +47,7 @@ const MoveableNav = () => {
         >
           <Link href="/utilities">
             <a onClick={() => setShow(false)}>
-              <img src="/Assets/3d/utilities.png" alt="" />
+              <Image src="/Assets/3d/utilities.png" alt="" priority="true" />
             </a>
           </Link>
         </div>
@@ -59,7 +60,7 @@ const MoveableNav = () => {
         >
           <Link href="/articles">
             <a onClick={() => setShow(false)}>
-              <img src="/Assets/3d/articles.png" alt="" />
+              <Image src="/Assets/3d/articles.png" alt="" priority="true" />
             </a>
           </Link>
         </div>
@@ -74,7 +75,7 @@ const MoveableNav = () => {
         >
           <Link href="/about">
             <a onClick={() => setShow(false)}>
-              <img src="/Assets/3d/about.png" alt="" />
+              <Image src="/Assets/3d/about.png" alt="" priority="true" />
             </a>
           </Link>
         </div>
@@ -89,7 +90,7 @@ const MoveableNav = () => {
         >
           <Link href="/">
             <a onClick={() => setShow(false)}>
-              <img src="/Assets/3d/hash.png" alt="" />
+              <Image src="/Assets/3d/hash.png" alt="" priority="true" />
             </a>
           </Link>
         </div>
