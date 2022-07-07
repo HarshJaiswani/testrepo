@@ -45,7 +45,7 @@ const MoveableNav = () => {
                 }
           }
         >
-          <Link href="/utilities" className="mt-2">
+          <Link href="/utilities">
             <a onClick={() => setShow(false)}>
               <Image src="/Assets/3d/utilities.png" alt="" priority="true" width={30} height={30} />
             </a>
