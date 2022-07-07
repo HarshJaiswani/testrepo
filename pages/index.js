@@ -17,7 +17,7 @@ export default function Home(props) {
     <MyWork />
     <Read blog={props.blog} />
     <WorkWeb />
-    <Recommendations />
+    {/* <Recommendations /> */}
     <Ask />
     <div className='w-[100%] text-white text-center text-lg bg-[#050d22]'> <Link href="https://www.freepik.com/"><a >Illustration By FreePik</a></Link></div>
     <Footer />

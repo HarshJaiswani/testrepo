@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 import styles from "../styles/MyWork.module.css";
 import Link from "next/link";
@@ -10,11 +10,12 @@ const MyWork = () => {
         <div className={styles.design}></div>
       </div>
       <div className={styles.abt}>
-        <img
-          src="/Assets/illustration.jpg"
-          style={{ width: "225px", borderRadius: "10px" }}
-          alt=""
-        ></img>
+        <Image
+          src="public/Assets/illustration.jpg"
+          width={230}
+          height={225}
+          alt="illustration"
+        ></Image>
         <div>
           <p>
             Peers on one side create pressure , but also motivates and brings a

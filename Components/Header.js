@@ -5,7 +5,6 @@ import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 import NavBar from "./NavBar";
 
 const Header = (props) => {
-  console.log(props)
   return (
     <div className={styles.mainHead}>
       <NavBar />

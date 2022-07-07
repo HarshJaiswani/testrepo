@@ -1,12 +1,12 @@
 {
-    "sno":1,
+    "sno":3,
     "title": "My First Tech Article main",
     "descp": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic repellendus, maxime, eius perspiciatis nisi ipsum ut nihil sit beatae cumque incidunt officia odio est?",
-    "link": "/post/article",
+    "link": "/post/articlecopy2",
     "date": "25th september 2022",
     "category": "Technology",
-    "slug":"article",
-    "parts":["lor","mor","sor"],
+    "slug":"articlecopy2",
+    "parts":["lorffffff","morfffff","sorfffffff"],
     "quote":"lorem ipsum",
     "quoteAuthor":"me",
     "author":"mwww"

@@ -5,13 +5,13 @@ import { BiChevronRight } from "react-icons/bi";
 
 const ArticleBlockTemplate = (props) => {
   return (
-    <div className={styles.articleBlock}>
+    <div className={styles.articleBlock} key={props.article.slug}>
       <div className={styles.articleDate}>
-        {props.article.blog.date} / {props.article.blog.category}
+        {props.article.date} / {props.article.category}
       </div>
-      <div className={styles.articleTitle}>{props.article.blog.title}</div>
-      <div className={styles.articleDescp}>{props.article.blog.descp}</div>
-      <Link href={props.article.blog.link}>
+      <div className={styles.articleTitle}>{props.article.title}</div>
+      <div className={styles.articleDescp}>{props.article.descp}</div>
+      <Link href={props.article.link}>
         <a className={styles.link}>
           Read More{" "}
           <span>

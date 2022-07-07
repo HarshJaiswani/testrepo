@@ -18,9 +18,6 @@
   box-shadow: 0px 2px 7px black;
   transition: all 0.4s;
 }
-.navIcons img {
-  width: 30px;
-}
 .navIcons span {
   margin: 0px 5px;
   color: white;

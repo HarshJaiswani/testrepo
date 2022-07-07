@@ -86,14 +86,18 @@
   color: orange;
 }
 .share {
-  margin: 20px 10px;
+  border-radius: 5px;
+  width: fit-content;
+  display: flex;
+  margin: 20px 5px;
+  background-color: #20202a;
+  padding: 10px 20px;
+  transition: all 0.4s;
 }
-.share > span {
-  color: gray;
-  margin: 0px 10px;
-}
-.share > span:hover {
-  color: white;
+.share:hover{
+  color: cyan;
+  transform: scale(0.95);
+  cursor: pointer;
 }
 .postNavigate {
   padding: 20px;

@@ -2,13 +2,13 @@
 import React from "react";
 import styles from "../styles/About.module.css";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-import { IoPersonCircle } from "react-icons/io5";
+import { IoPersonCircle , IoLogoYoutube , IoLogoLinkedin } from "react-icons/io5";
 import Heading from "../Components/Heading";
 import { TagCloud } from "react-tagcloud";
 import Footer from "../Components/Footer";
 import Link from "next/link";
 
-const About = (props) => {
+const About = () => {
   const data = [
     { value: "JavaScript", count: 38 },
     { value: "ReactJs", count: 30 },
@@ -64,7 +64,7 @@ const About = (props) => {
                 Currently , I am working as one man army but I will be happily
                 accepting my &#34;Hustlers&#34; If you are intrested in Joining
                 Us
-                <button>Contact Us</button>
+                <button><Link href="https://forms.gle/cxo8s44xseoEDAFi6"><a>Contact Us</a></Link></button>
               </span>
             </div>
           </div>
@@ -112,7 +112,11 @@ const About = (props) => {
               part of all those wonders that will happen that I cant do alone. I
               want to add value to the community as much as I can , be it with
               my work or by money! <br />
-              Reach me out on LinkedIn - HarshJaiswani(Founder of LeGroSh)
+              Reach me out on <br />
+              <div>
+                <Link href="https://www.youtube.com/channel/UCJN78Ra_w_0Vj5MqLBvsxMA"><a><IoLogoYoutube className="text-red-600 mx-5 text-3xl" /></a></Link>
+                <Link href="https://www.linkedin.com/in/harsh-jaiswani-26108823b/"><a><IoLogoLinkedin className="text-indigo-500 mx-5 text-3xl" /></a></Link>
+              </div>
             </span>
           </div>
         <div className={styles.abtMeWrap}>
@@ -217,11 +221,5 @@ const About = (props) => {
     </>
   );
 };
-
-export async function getServerSideProps(context) {
-  return {
-    props: {abcd:"hllo"}
-  }
-}
 
 export default About;

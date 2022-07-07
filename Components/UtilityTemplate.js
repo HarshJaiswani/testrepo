@@ -9,7 +9,7 @@ const UtilityTemplate = () => {
       <a>
         <div className={styles.utilityBlock}>
           <div className={styles.head}>
-            <img src="/Assets/3d/hash.png" alt="" />
+            <img src="public/Assets/3d/hash.png" alt="" />
           </div>
           <div className={styles.title}>Title 1 fro utility 1</div>
           <div className={styles.descp}>
