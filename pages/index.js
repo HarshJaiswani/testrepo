@@ -10,12 +10,25 @@ import Link from "next/link"
 import Recommendations from '../Components/Recommendations'
 
 export default function Home(props) {
+  const blog = {
+    "sno":1,
+    "title": "My First Tech Article main",
+    "descp": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic repellendus, maxime, eius perspiciatis nisi ipsum ut nihil sit beatae cumque incidunt officia odio est?",
+    "link": "/post/article",
+    "date": "25th september 2022",
+    "category": "Technology",
+    "slug":"article",
+    "parts":["lor","mor","sor"],
+    "quote":"lorem ipsum",
+    "quoteAuthor":"me",
+    "author":"mwww"
+}
   return (
     <>
     {/* <NavBar /> */}
-    <Header quote={props.quote} />
+    <Header />
     <MyWork />
-    <Read blog={props.blog} />
+    <Read blog={blog} />
     <WorkWeb />
     {/* <Recommendations /> */}
     <Ask />
@@ -24,14 +37,3 @@ export default function Home(props) {
     </>
   )
 }
-
-// export async function getServerSideProps(context) {
-//   const data = await fetch(`https://legrosh.vercel.app/api/getQuotes`);
-//   const quote = await data.json();
-//   const data2 = await fetch(`https://legrosh.vercel.app/api/getBlog?slug=article`);
-//   const blog = await data2.json();
-
-//   return{
-//     props : {quote,blog}
-//   }
-// }

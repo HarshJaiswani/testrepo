@@ -4,7 +4,7 @@ import styles from "../styles/Header.module.css";
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 import NavBar from "./NavBar";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div className={styles.mainHead}>
       <NavBar />
@@ -28,12 +28,14 @@ const Header = (props) => {
             <span className={styles.quoteLeft}>
               <FaQuoteLeft className="inline-block text-lg mx-2 " />
             </span>
-            {props.quote.text}
+            {/* {quote.text} */}
             <span className={styles.quoteRight}>
               <FaQuoteRight className="inline-block text-lg mx-2 " />
             </span>
           </div>
-          <div className={styles.quoteAuthor}>{props.quote.author}</div>
+          <div className={styles.quoteAuthor}>
+            {/* {quote.author} */}
+            </div>
         </div>
       </div>
     </div>
