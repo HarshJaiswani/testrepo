@@ -18,12 +18,12 @@ const Articles = (props) => {
   )
 }
 
-export async function getServerSideProps(context) {
-  const data = await fetch("https://legrosh.vercel.app/api/getBlogs");
-  const blogs = await data.json();
-  return{
-    props : {blogs : blogs.data}
-  }
-}
+// export async function getServerSideProps(context) {
+//   const data = await fetch("https://legrosh.vercel.app/api/getBlogs");
+//   const blogs = await data.json();
+//   return{
+//     props : {blogs : blogs.data}
+//   }
+// }
 
 export default Articles

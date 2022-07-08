@@ -25,13 +25,13 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const data = await fetch(`https://legrosh.vercel.app/api/getQuotes`);
-  const quote = await data.json();
-  const data2 = await fetch(`https://legrosh.vercel.app/api/getBlog?slug=article`);
-  const blog = await data2.json();
+// export async function getServerSideProps(context) {
+//   const data = await fetch(`https://legrosh.vercel.app/api/getQuotes`);
+//   const quote = await data.json();
+//   const data2 = await fetch(`https://legrosh.vercel.app/api/getBlog?slug=article`);
+//   const blog = await data2.json();
 
-  return{
-    props : {quote,blog}
-  }
-}
+//   return{
+//     props : {quote,blog}
+//   }
+// }
