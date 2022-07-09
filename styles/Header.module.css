@@ -13,6 +13,9 @@
     rgba(255, 0, 95, 1) 100%
   );
 }
+.yellowColor{
+  color: rgb(234 179 8);
+}
 .head {
   width: 100%;
   height: 90vh;
