@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Read.module.css";
 import ArticleBlockTemplate from "../Components/ArticleBlockTemplate";
+import useSWR from "swr";
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Read = (props) => {
+const Read = () => {
+  const { data, error } = useSWR("/api/getBlogs", fetcher);
+  const [articles, setArticles] = useState([]);
+  const [isOk, setIsOk] = useState("true");
+  useEffect(() => {
+    if (error) {
+      setIsOk("false");
+    }
+    if (!data) {
+      setIsOk("true");
+    }
+    if (data) {
+      setArticles(data.data);
+    }
+  }, [error, data]);
+  console.log(articles);
   return (
     <div className={styles.read}>
       <div className={styles.head}>
@@ -13,12 +30,20 @@ const Read = (props) => {
         </p>
       </div>
       <div className={styles.articleCarousal}>
-        <ArticleBlockTemplate article={props.blog} />
-        <ArticleBlockTemplate article={props.blog} />
-        <ArticleBlockTemplate article={props.blog} />
-        <ArticleBlockTemplate article={props.blog} />
-        <ArticleBlockTemplate article={props.blog} />
-        <ArticleBlockTemplate article={props.blog} />
+        {isOk == "false" ? (
+          <div className="w-full text-2xl text-yellow-500">
+            Some Issue Occured!
+          </div>
+        ) : (
+          <>
+          <div className="w-full text-2xl text-center my-5 text-yellow-500">
+            {isOk}
+          </div>
+          {
+          articles.map((k) => {
+            <ArticleBlockTemplate article={k} />
+          })}
+        </>)}
       </div>
     </div>
   );
