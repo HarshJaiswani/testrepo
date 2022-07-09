@@ -1,14 +1,17 @@
+import path from "path";
 import * as fs from "fs";
 
-export default function handler(req, res) {
-    const blogsArray = [];
-    fs.readdir('https://legrosh.vercel.app/BlogData',(err,data)=>{
+export default async function handler(req, res) {
+  //Find the absolute path of the json directory
+  const jsonDirectory = path.join(process.cwd(), "BlogData");
+  const blogsArray = [];
+  fs.readdir(jsonDirectory,(err,data)=>{
         if(err){
             res.status(400).json({error:"No such File or Directory"});
         }
         else{
             data.forEach((e)=>{
-                blogsArray.push(JSON.parse(fs.readFileSync(`https://legrosh.vercel.app/BlogData/${e}`,'utf-8')));
+                blogsArray.push(JSON.parse(fs.readFileSync(`${jsonDirectory}/${e}`,'utf-8')));
             })
         }
         res.status(200).json({data : blogsArray});
