@@ -7,7 +7,7 @@ export default function handler(req, res) {
     fs.readFile("public/Quotes.json",'utf-8',(err,data)=>{
         if (err) {
             console.log(err);
-            res.status(400).json({error:"No such File or Directory"});
+            res.status(400).json({error:err});
         }
         else{
             const quotes = JSON.parse(data);
