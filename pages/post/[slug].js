@@ -8,23 +8,28 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useSWR from "swr";
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Post = (props) => {
-  const [blog, setBlog] = useState();
-//   const [postNo, setPostNo] = useState();
+const Post = () => {
+  const [blog, setBlog] = useState({});
+  const [status, setStatus] = useState("true");
+  //   const [postNo, setPostNo] = useState();
   const router = useRouter();
+  const { slug } = router.query;
+  const { data, error } = useSWR(`/api/getBlog?slug=${slug}`, fetcher);
+
   useEffect(() => {
-    if (!router.isReady) return;
-    const { slug } = router.query;
-    fetch(`https://legrosh.vercel.app/api/getBlog?slug=${slug}`)
-      .then((a) => {
-        return a.json();
-      })
-      .then((parsed) => {
-        setBlog(parsed);
-        // setPostNo(parsed.sno);
-      });
-  }, [router.isReady , router.query]);
+    if(error){
+      setStatus("false");
+    }
+    if (!data) {
+      setStatus("true");
+    }
+    if(data){
+      setBlog(data);
+    }
+    }, [error , data]);
 //   const fetchBlog = async (no) => {
 //     if (postNo == 1) {
 //         toast('You are on first article!', {
@@ -69,110 +74,110 @@ const Post = (props) => {
     });
   };
   return (
-    <div className={styles.post}>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <ToastContainer />
-      <div className={styles.head}>
-        <div className={styles.title}>{blog && blog.title}</div>
-        <div className={styles.date}>{blog && blog.date}</div>
-      </div>
-      <div className={styles.blog}>
-        <div className={styles.blogQuote}>
-          <span className={styles.quoteLeft}>
-            <FaQuoteLeft className="inline-block text-lg mx-2 " />
-          </span>
-          {blog && blog.quote}
-          <span className={styles.quoteRight}>
-            <FaQuoteRight className="inline-block text-lg mx-2 " />
-          </span>
-          <div className="text-lg mx-2 my-2">-{blog && blog.quoteAuthor}</div>
-        </div>
-        {blog &&
-          blog.parts.map((e) => {
-            return (
-              <>
-                <span>{e}</span>
-              </>
-            );
-          })}
-        <div className={styles.ending}>
-          <div className={styles.posted}>
-            Posted in
-            <span>
-              <Link href="/">
-                <a>{blog && blog.category}</a>
-              </Link>
-            </span>
-            by <em className="text-gray-500">{blog && blog.author}</em>
-          </div>
-          <div className={styles.share} onClick={copyFunc}>
-            Spread a word <IoCopyOutline className="text-2xl ml-5" />
-          </div>
-        </div>
-      </div>
-      <div className={styles.feedBack}>
-        <div>
-          Did You Enjoyed Reading ? <br />
-          <span>(Kindly Give Us The Genuine Opinion)</span>
-        </div>
-        <button
-          onClick={() => {
-            toast.success("Happy! You Liked It!", {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-            });
-          }}
-        >
-          Yes!
-        </button>
-        <button
-          onClick={() => {
-            toast.info("Thanks for feedback , we'll Improve!", {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-            });
-          }}
-        >
-          Nope!
-        </button>
-      </div>
-      {/* <Comment /> */}
-      {/* <div className={styles.postNavigate}>
-        <span onClick={() => fetchBlog(--postNo)}>
-          <BiChevronLeft
-            className={`inline-block text-2xl ${styles.prev} cursor-pointer`}
-          />
-          Previous
-        </span>
-        <div>All Posts</div>
-        <span onClick={() => fetchBlog(++postNo)}>
-          Next
-          <BiChevronRight
-            className={`inline-block text-2xl ${styles.next} cursor-pointer`}
-          />
-        </span>
-      </div> */}
+   <div className={styles.post}>
+    <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+    />
+    <ToastContainer />
+    <div className={styles.head}>
+      <div className={styles.title}>{blog && blog.title}</div>
+      <div className={styles.date}>{blog && blog.date}</div>
     </div>
+    <div className={styles.blog}>
+      <div className={styles.blogQuote}>
+        <span className={styles.quoteLeft}>
+          <FaQuoteLeft className="inline-block text-lg mx-2 " />
+        </span>
+        {blog && blog.quote}
+        <span className={styles.quoteRight}>
+          <FaQuoteRight className="inline-block text-lg mx-2 " />
+        </span>
+        <div className="text-lg mx-2 my-2">-{blog && blog.quoteAuthor}</div>
+      </div>
+      {blog && blog.parts &&
+        blog.parts.map((e) => {
+          return (
+            <>
+              <span>{e}</span>
+            </>
+          );
+        })}
+      <div className={styles.ending}>
+        <div className={styles.posted}>
+          Posted in
+          <span>
+            <Link href="/">
+              <a>{blog && blog.category}</a>
+            </Link>
+          </span>
+          by <em className="text-gray-500">{blog && blog.author}</em>
+        </div>
+        <div className={styles.share} onClick={copyFunc}>
+          Spread a word <IoCopyOutline className="text-2xl ml-5" />
+        </div>
+      </div>
+    </div>
+    <div className={styles.feedBack}>
+      <div>
+        Did You Enjoyed Reading ? <br />
+        <span>(Kindly Give Us The Genuine Opinion)</span>
+      </div>
+      <button
+        onClick={() => {
+          toast.success("Happy! You Liked It!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }}
+      >
+        Yes!
+      </button>
+      <button
+        onClick={() => {
+          toast.info("Thanks for feedback , we'll Improve!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }}
+      >
+        Nope!
+      </button>
+    </div>
+    {/* <Comment /> */}
+    {/* <div className={styles.postNavigate}>
+      <span onClick={() => fetchBlog(--postNo)}>
+        <BiChevronLeft
+          className={`inline-block text-2xl ${styles.prev} cursor-pointer`}
+        />
+        Previous
+      </span>
+      <div>All Posts</div>
+      <span onClick={() => fetchBlog(++postNo)}>
+        Next
+        <BiChevronRight
+          className={`inline-block text-2xl ${styles.next} cursor-pointer`}
+        />
+      </span>
+    </div> */}
+  </div>
   );
 };
 

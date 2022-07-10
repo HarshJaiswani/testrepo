@@ -28,11 +28,3 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: #050d22;
 }
-
-.headImg {
-  margin: 20px;
-  /* width: 50px; */
-  background-color: orange;
-  padding: 2px;
-  border-radius: 50%;
-}

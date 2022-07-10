@@ -16,10 +16,9 @@ const Read = () => {
       setIsOk("true");
     }
     if (data) {
-      setArticles(data.data);
+      setArticles(data.data.slice(0,6));
     }
   }, [error, data]);
-  console.log(articles);
   return (
     <div className={styles.read}>
       <div className={styles.head}>
@@ -36,12 +35,9 @@ const Read = () => {
           </div>
         ) : (
           <>
-          <div className="w-full text-2xl text-center my-5 text-yellow-500">
-            {isOk}
-          </div>
           {
           articles.map((k) => {
-            <ArticleBlockTemplate article={k} />
+            return <><ArticleBlockTemplate article={k} /></>
           })}
         </>)}
       </div>

@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         onLoaderFinished={() => setProgress(0)}
       />
       <MoveableNav />
-      <Component {...pageProps} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+      {!loading && <Component {...pageProps} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
     </>
   );
 }
