@@ -155,6 +155,18 @@
   letter-spacing: 1px;
   font-weight: bold;
 }
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+  .head{
+    flex-direction: column;
+  }
+  .title{
+    margin: 0px 20px;
+    margin-top: 10px;
+  }
+  .date{
+    margin: 10px 20px;
+  }
+}
 @media screen and (max-width: 800px) and (min-width: 500px) {
   .feedBack{
     flex-direction: column;
@@ -162,12 +174,24 @@
   .feedBack div{
     margin: 20px 10px;
   }
+  .head{
+    flex-direction: column;
+  }
+  .title{
+    margin: 0px 20px;
+    margin-top: 10px;
+  }
+  .date{
+    margin: 10px 20px;
+  }
 }
 @media screen and (max-width: 500px) {
   .post {
+    width: 90%;
     padding: 20px 0px;
   }
   .blog {
+    width: 90%;
     padding: 10px;
   }
   .postNavigate {
@@ -182,9 +206,21 @@
     font-size: 0.9rem;
   }
   .feedBack{
+    width: 90%;
     flex-direction: column;
   }
   .feedBack div{
     margin: 20px 10px;
+  }
+  .head{
+    width: 90%;
+    flex-direction: column;
+  }
+  .title{
+    margin: 0px 20px;
+    margin-top: 10px;
+  }
+  .date{
+    margin: 10px 20px;
   }
 }
