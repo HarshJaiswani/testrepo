@@ -5,7 +5,7 @@ const Loding = () => {
   return (
     <div className={styles.loding}>
       <div className={styles.logo}>LGS</div>
-      <span className="text-3xl text-white">LeGroSh</span>
+      <span className={styles.name}>LeGroSh</span>
     </div>
   );
 };

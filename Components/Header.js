@@ -34,25 +34,25 @@ const Header = () => {
         <div className={styles.headSide1}>
           <span>
             <span className={styles.yellowColor}>Le</span>
-            <span className="text-gray-500">arn</span>
+            <span className={styles.grayColor}>arn</span>
           </span>
           <span>
             <span className={styles.yellowColor}>Gro</span>
-            <span className="text-gray-500">w</span>
+            <span className={styles.grayColor}>w</span>
           </span>
           <span>
             <span className={styles.yellowColor}>Sh</span>
-            <span className="text-gray-500">are</span>
+            <span className={styles.grayColor}>are</span>
           </span>
         </div>
         <div className={styles.headSide2}>
           <div className={styles.quotes}>
             <span className={styles.quoteLeft}>
-              <FaQuoteLeft className="inline-block text-lg mx-2 " />
+              <FaQuoteLeft className={styles.quoteStyle} />
             </span>
             {quote.text}
             <span className={styles.quoteRight}>
-              <FaQuoteRight className="inline-block text-lg mx-2 " />
+              <FaQuoteRight className={styles.quoteStyle} />
             </span>
           </div>
           <div className={styles.quoteAuthor}>{quote.author}</div>

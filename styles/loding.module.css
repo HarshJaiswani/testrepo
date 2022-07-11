@@ -7,6 +7,10 @@
   justify-content: center;
   overflow-y: hidden;
 }
+.name{
+  color: white;
+  font-size: 30px;
+}
 .logo {
   display: flex;
   justify-content: center;
