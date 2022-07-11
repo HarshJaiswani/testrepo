@@ -110,6 +110,7 @@ const Post = () => {
             </>
           );
         })}
+        <span>Learn - Grow - Share</span>
       <div className={styles.ending}>
         <div className={styles.posted}>
           Posted in

@@ -3,21 +3,16 @@ import React from "react";
 import styles from "../styles/UtilityTemplate.module.css";
 import Link from "next/link";
 
-const UtilityTemplate = () => {
+const UtilityTemplate = (props) => {
   return (
-    <Link href="/">
+    <Link href={props.getDetail.utilLink} key={props.getDetail.utilLink}>
       <a>
         <div className={styles.utilityBlock}>
           <div className={styles.head}>
-            <img src="/Assets/3d/hash.png" alt="" />
+            <img src={props.getDetail.imgUrl} alt="" />
           </div>
-          <div className={styles.title}>Title 1 fro utility 1</div>
-          <div className={styles.descp}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-            accusantium possimus cumque molestias perspiciatis tenetur
-            voluptatibus neque corporis quas dolores ullam fuga aliquid,
-            asperiores atque?
-          </div>
+          <div className={styles.title}>{props.getDetail.title}</div>
+          <div className={styles.descp}>{props.getDetail.descp}</div>
         </div>
       </a>
     </Link>

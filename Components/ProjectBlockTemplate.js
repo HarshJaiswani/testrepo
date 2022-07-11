@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const ProjectBlockTemplate = (props) => {
   return (
-    <div className={styles.project}>
+    <div className={styles.project} key={props.getDetails.projectNum}>
       <div className={styles.projectHead}>
         <FiFolder className="text-[#64ffda] text-3xl" />
         <div>

@@ -8,6 +8,7 @@ import Read from '../Components/Read'
 import Footer from "../Components/Footer"
 import Link from "next/link"
 import Recommendations from '../Components/Recommendations'
+import QR from '../Components/QR'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
     <Read />
     <WorkWeb />
     {/* <Recommendations /> */}
+    <QR />
     <Ask />
     <div className='w-[100%] text-white text-center text-sm bg-[#050d22]'> <Link href="https://www.freepik.com/"><a >Illustration By FreePik</a></Link></div>
     <Footer />
