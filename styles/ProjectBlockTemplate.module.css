@@ -6,6 +6,9 @@
   border-radius: 5px;
   box-shadow: 0px 10px 30px -15px rgba(2, 12, 27, 0.7);
   transition: all 0.4s;
+  /* background: url("/public/Assets/me.jpg");
+  background-size: 300px 300px;
+  background-position: 0px 0px; */
 }
 .project:hover {
   transform: translateY(-10px);

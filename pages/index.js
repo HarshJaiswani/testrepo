@@ -19,7 +19,7 @@ export default function Home() {
     <WorkWeb />
     {/* <Recommendations /> */}
     <Ask />
-    <div className='w-[100%] text-white text-center text-lg bg-[#050d22]'> <Link href="https://www.freepik.com/"><a >Illustration By FreePik</a></Link></div>
+    <div className='w-[100%] text-white text-center text-sm bg-[#050d22]'> <Link href="https://www.freepik.com/"><a >Illustration By FreePik</a></Link></div>
     <Footer />
     </>
   )
