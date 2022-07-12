@@ -66,11 +66,11 @@ const Projects = () => {
         note="Being a learner and currently in my 1st semester of pursuing Btech , I have made only a few projects. Out of which some major ones are shared here."
       />
       <div className={styles.projectWrapper}>
-        {project1 && (
+        {show && project1 && (
           <ProjectTemplate direction="right" getDetails={project1} />
         )}
-        {project2 && <ProjectTemplate direction="left" getDetails={project2} />}
-        {/* {project3 && <ProjectTemplate direction="right" getDetails={project3} />} */}
+        {show && project2 && <ProjectTemplate direction="left" getDetails={project2} />}
+        {/* {show && project3 && <ProjectTemplate direction="right" getDetails={project3} />} */}
         {!show && (
           <>
             <ProjectBlockTemplate getDetails={project1} />
