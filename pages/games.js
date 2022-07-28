@@ -32,7 +32,7 @@ const Games = () => {
       <div className={styles.wrapper}>
         {isOk == "true" &&
           games &&
-          games.map((k, idx) => <GameTemplate details={k} idx={idx} />)}
+          games.map((k, idx) => <GameTemplate key={idx} details={k} idx={idx} />)}
       </div>
     </div>
   );
