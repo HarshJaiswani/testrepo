@@ -1,0 +1,10 @@
+.block {
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.block:hover {
+  /* box-shadow: 0px 2px 10px white; */
+  transform: translateY(-10px);
+  cursor: pointer;
+}

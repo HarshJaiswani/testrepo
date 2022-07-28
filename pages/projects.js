@@ -32,7 +32,7 @@ const Projects = () => {
   const project1 = {
     projectNum: "#01",
     projectName: "Service Based Website",
-    imgUrl: "/Assets/project1.PNG",
+    imgUrl: "/Assets/projects/project1.PNG",
     projectDescp:
       "This is the website for a legal or organisation firm to display their services and about them to get custmers online",
     projectTech: ["javascript", "html", "css"],
@@ -42,7 +42,7 @@ const Projects = () => {
   const project2 = {
     "projectNum": "#02",
     "projectName": "LGS-Old",
-    "imgUrl": "/Assets/project2.PNG",
+    "imgUrl": "/Assets/projects/project2.PNG",
     "projectDescp": "This is the older version of the web app of LeGroSh",
     "projectTech": ["ReactJs", "JavaScript", "Css" , "HTML"],
     "githubLink": "https://github.com/HarshJaiswani/LeGroSh-old",

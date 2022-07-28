@@ -9,6 +9,7 @@ import Footer from "../Components/Footer"
 import Link from "next/link"
 import Recommendations from '../Components/Recommendations'
 import QR from '../Components/QR'
+import LGSGames from '../Components/LGSGames'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
     <MyWork />
     <Read />
     <WorkWeb />
+    <LGSGames />
     {/* <Recommendations /> */}
     <QR />
     <Ask />

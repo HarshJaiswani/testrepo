@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Heading from "../Components/Heading";
 import UtilityTemplate from "../Components/UtilityTemplate";
 import styles from "../styles/Utilities.module.css";
+import GameComp from "../Components/GameComp";
 import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -30,6 +31,7 @@ const Utilities = () => {
         note="I will be delighted if I can make your journey a little smoother by providing little tools for a bigger deed. Hope you like them!"
       />
       <div className={styles.utilityWrapper}>
+        <GameComp />
         {utilities.length == 0 ? (
           <div className="w-full text-center text-yellow-400 text-3xl">
             Tools are on the way!

@@ -8,9 +8,9 @@ const UtilityTemplate = (props) => {
     <Link href={props.getDetail.utilLink} key={props.getDetail.utilLink}>
       <a>
         <div className={styles.utilityBlock}>
-          <div className={styles.head}>
+          {props.getDetail.imgUrl != "" ? <div className={styles.head}>
             <img src={props.getDetail.imgUrl} alt="" />
-          </div>
+          </div> : ""}
           <div className={styles.title}>{props.getDetail.title}</div>
           <div className={styles.descp}>{props.getDetail.descp}</div>
         </div>
