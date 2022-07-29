@@ -41,3 +41,12 @@
     background-size: 100% 50vh;
     opacity: 0.2;
 }
+@media screen and (max-width: 600px) {
+    .lgsgames h1{
+        font-size: 2rem;
+    }
+    .btn{
+        padding: 2px 30px;
+        font-size: 1rem;
+    }
+}
