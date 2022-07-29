@@ -8,7 +8,8 @@ const GameTemplate = ({ details , idx }) => {
     <Link href={details.liveLink} key={idx}>
       <a>
         <div className={styles.block}>
-          <img src={details.img} className="w-[400px] rounded-md" alt="" />
+          {/* <img src={details.img} className="w-[400px] rounded-md" alt="" /> */}
+          <img src="/Assets/games/tic-tac-toe.png" className="w-[400px] rounded-md" alt="" />
           <span className="bg-white inline-block w-full py-1 text-center font-semibold text-[#050d22]">
             {details.title}
           </span>
