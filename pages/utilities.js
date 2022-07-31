@@ -41,10 +41,10 @@ const Utilities = () => {
         )}
         {isOk == "true" &&
           utilities &&
-          utilities.map((k) => {
+          utilities.map((k,idx) => {
             return (
               <>
-                <UtilityTemplate getDetail={k} />
+                <UtilityTemplate key={idx} getDetail={k} />
               </>
             );
           })}

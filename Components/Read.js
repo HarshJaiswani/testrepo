@@ -36,8 +36,8 @@ const Read = () => {
         ) : (
           <>
           {
-          articles.map((k) => {
-            return <><ArticleBlockTemplate article={k} /></>
+          articles.map((k,idx) => {
+            return <><ArticleBlockTemplate key={idx} article={k} /></>
           })}
         </>)}
       </div>

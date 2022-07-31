@@ -9,14 +9,14 @@ const GameComp = () => {
         <div
           className={`cursor-pointer hover:bg-gradient-to-r hover:from-pink-500 hover:via-indigo-500 hover:to-purple-500 hover:transition-all bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md flex justify-between items-center w-full px-5 py-4`}
         >
-          <div>
+          <div className="hidden sm:block">
             <span className="text-2xl text-white font-bold">Game Center</span>{" "}
             <br />{" "}
-            <span className="text-gray-300 tracking-wide">
+            <span className="text-gray-300 tracking-wide hidden lg:block">
               (Relaxing is an important part of the journey to make it lively)
             </span>
           </div>
-          <div>
+          <div className="m-auto sm:m-0">
             <span className="text-lg text-white font-semibold">LGS Games</span>
             <BsEyeglasses className="text-yellow-400 text-5xl inline mx-2" />
           </div>
