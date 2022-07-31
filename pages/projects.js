@@ -63,7 +63,7 @@ const Projects = () => {
         name="Some things I&#39;ve Built"
         img="projects"
         tagLine="A way to present examples to encourage you. &#39;Not to ShowOff&#39;"
-        note="Being a learner and currently in my 1st semester of pursuing Btech , I have made only a few projects. Out of which some major ones are shared here."
+        note="Aspiring to Build Great Things"
       />
       <div className={styles.projectWrapper}>
         {show && project1 && (

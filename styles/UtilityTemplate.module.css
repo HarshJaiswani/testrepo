@@ -17,9 +17,10 @@
   justify-content: center;
   align-items: center;
 }
-.head img {
-  width: 50px;
-  margin: 30px;
+.head span{
+  /* background-color: rgba(255, 0, 0, 0.2); */
+  padding: 15px;
+  border-radius: 50%;
 }
 .title {
   text-align: center;

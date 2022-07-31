@@ -8,9 +8,28 @@ const UtilityTemplate = (props) => {
     <Link href={props.getDetail.utilLink} key={props.getDetail.utilLink}>
       <a>
         <div className={styles.utilityBlock}>
-          {props.getDetail.imgUrl != "" ? <div className={styles.head}>
-            <img src={props.getDetail.imgUrl} alt="" />
-          </div> : ""}
+          {props.getDetail.imgUrl != "" ? (
+            <div className={styles.head}>
+              <span className="bg-red-200/10">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="2em"
+                  width="2em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill={props.getDetail.fill}
+                    d={props.getDetail.imgUrl}
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          ) : (
+            ""
+          )}
           <div className={styles.title}>{props.getDetail.title}</div>
           <div className={styles.descp}>{props.getDetail.descp}</div>
         </div>
