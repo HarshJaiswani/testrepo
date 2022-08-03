@@ -36,10 +36,14 @@ const Articles = () => {
             Loading...
           </div> : ""}
           {
-          articles.map((k) => {
-            return <><ArticleBlockTemplate article={k} /></>
+          articles && articles.map((k) => {
+            return !(k.category.includes("Book")) ? <><ArticleBlockTemplate article={k} /></> : ""
           })}
         </>)}
+        <div className={styles.bookTitle}>Book Summaries</div>
+        {isOk == "true" && articles && articles.map((k) => {
+          return k.category.includes("Book") ? <><ArticleBlockTemplate article={k} /></> : ""
+        })}
       </div>
       <Footer />
     </div>

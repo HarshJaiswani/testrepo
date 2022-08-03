@@ -27,7 +27,7 @@ const Post = () => {
       setStatus("true");
     }
     if(data){
-      setBlog(data);
+      setBlog(finData);
     }
     }, [error , data]);
 //   const fetchBlog = async (no) => {
@@ -121,8 +121,11 @@ const Post = () => {
           </span>
           by <em className="text-gray-500">{blog && blog.author}</em>
         </div>
+        <div className="flex justify-between flex-wrap">
         <div className={styles.share} onClick={copyFunc}>
           Spread a word <IoCopyOutline className="text-2xl ml-5" />
+        </div>
+        <Link href="/articles"><a className={`${styles.share} tracking-wider`}>Explore More Articles &rarr;</a></Link>
         </div>
       </div>
     </div>
