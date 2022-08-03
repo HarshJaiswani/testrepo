@@ -3,6 +3,7 @@ import Heading from "../Components/Heading";
 import styles from "../styles/Games.module.css";
 import GameTemplate from "../Components/GameTemplate";
 import useSWR from "swr";
+import Footer from "../Components/Footer";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Games = () => {
@@ -34,6 +35,7 @@ const Games = () => {
           games &&
           games.map((k, idx) => <GameTemplate key={idx} details={k} idx={idx} />)}
       </div>
+      <Footer />
     </div>
   );
 };

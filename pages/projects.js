@@ -5,6 +5,7 @@ import ProjectBlockTemplate from "../Components/ProjectBlockTemplate";
 import ProjectTemplate from "../Components/ProjectTemplate";
 import styles from "../styles/Projects.module.css";
 import useSWR from "swr";
+import Footer from "../Components/Footer";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Projects = () => {
@@ -97,6 +98,7 @@ const Projects = () => {
             })}
         </div>
       )}
+      <Footer />
     </div>
   );
 };

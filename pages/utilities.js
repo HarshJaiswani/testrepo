@@ -4,6 +4,7 @@ import UtilityTemplate from "../Components/UtilityTemplate";
 import styles from "../styles/Utilities.module.css";
 import GameComp from "../Components/GameComp";
 import useSWR from "swr";
+import Footer from "../Components/Footer";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Utilities = () => {
@@ -49,6 +50,7 @@ const Utilities = () => {
             );
           })}
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React,{useState , useEffect} from 'react'
 import ArticleBlockTemplate from '../Components/ArticleBlockTemplate'
 import Heading from '../Components/Heading'
+import Footer from '../Components/Footer'
 import styles from "../styles/Articles.module.css"
 import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -40,6 +41,7 @@ const Articles = () => {
           })}
         </>)}
       </div>
+      <Footer />
     </div>
   )
 }

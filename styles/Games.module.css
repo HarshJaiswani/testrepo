@@ -5,6 +5,7 @@
 }
 .wrapper{
     margin: auto;
+    margin-bottom: 30px;
     width: 80%;
     display: flex;
     justify-content: space-evenly;

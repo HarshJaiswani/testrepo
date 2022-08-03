@@ -10,7 +10,7 @@ const ArticleBlockTemplate = (props) => {
         {props.article.date} / {props.article.category}
       </div>
       <div className={styles.articleTitle}>{props.article.title}</div>
-      <div className={styles.articleDescp}>{props.article.descp}</div>
+      <div className={styles.articleDescp}>{props.article.descp}...</div>
       <Link href={props.article.link}>
         <a className={styles.link}>
           Read More{" "}
