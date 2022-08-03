@@ -27,7 +27,7 @@ const Post = () => {
       setStatus("true");
     }
     if(data){
-      setBlog(finData);
+      setBlog(data);
     }
     }, [error , data]);
 //   const fetchBlog = async (no) => {
