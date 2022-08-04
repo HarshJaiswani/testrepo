@@ -37,7 +37,7 @@ const Read = () => {
           <>
           {
           articles.map((k,idx) => {
-            return <><ArticleBlockTemplate key={idx} article={k} /></>
+            return !(k.category.includes("Book")) ? <><ArticleBlockTemplate key={idx} article={k} /></> : ""
           })}
         </>)}
       </div>
