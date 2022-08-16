@@ -19,7 +19,7 @@ const Articles = () => {
     }
     if (data) {
       setIsOk("true");
-      setArticles(data.data);
+      setArticles(data.data.sort((a,b) => a.sno - b.sno));
     }
   }, [error, data]);
   return (
@@ -36,13 +36,13 @@ const Articles = () => {
             Loading...
           </div> : ""}
           {
-          articles && articles.map((k) => {
-            return !(k.category.includes("Book")) ? <><ArticleBlockTemplate article={k} /></> : ""
+          articles && articles.map((k,index) => {
+            return !(k.category.includes("Book")) ? <ArticleBlockTemplate article={k} key={index} /> : ""
           })}
         </>)}
         <div className={styles.bookTitle}>Book Summaries</div>
-        {isOk == "true" && articles && articles.map((k) => {
-          return k.category.includes("Book") ? <><ArticleBlockTemplate article={k} /></> : ""
+        {isOk == "true" && articles && articles.map((k,index) => {
+          return k.category.includes("Book") ? <ArticleBlockTemplate article={k} key={index} /> : ""
         })}
       </div>
       <Footer />

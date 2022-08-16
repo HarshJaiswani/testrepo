@@ -16,7 +16,7 @@ const Read = () => {
       setIsOk("true");
     }
     if (data) {
-      setArticles(data.data.slice(0,6));
+      setArticles(data.data.sort((a,b) => a.sno - b.sno).slice(0,6));
     }
   }, [error, data]);
   return (
