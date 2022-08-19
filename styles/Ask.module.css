@@ -5,7 +5,7 @@
 }
 #ask h1 {
   font-size: 2.7rem;
-  font-family: cursive;
+  font-family: monospace;
   width: 100%;
   text-align: center;
   background: -webkit-linear-gradient(-70deg, #ff7170 0%, #ffe57f 100%);

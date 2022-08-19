@@ -21,7 +21,7 @@
   letter-spacing: 1px;
   margin: 20px;
   color: white;
-  font-family: cursive;
+  font-family: monospace;
 }
 .date {
   padding: 5px 20px;
@@ -54,7 +54,7 @@
   border-radius: 5px;
   font-size: 1.2rem;
   text-align: center;
-  font-family: cursive;
+  font-family: monospace;
 }
 .quoteLeft {
   position: absolute;

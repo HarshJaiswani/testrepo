@@ -44,7 +44,7 @@
 }
 .projectTech span {
   margin-right: 15px;
-  font-family: cursive;
+  font-family: monospace;
 }
 @media screen and (max-width: 600px) {
   .project:hover {

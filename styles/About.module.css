@@ -102,8 +102,6 @@
 .abtCompany span {
   font-family: monospace;
   text-align: center;
-  letter-spacing: 1px;
-  word-spacing: 2px;
   font-size: 1.2rem;
   color: whitesmoke;
 }

@@ -103,13 +103,9 @@ const Post = () => {
         <div className="text-lg mx-2 my-2">-{blog && blog.quoteAuthor}</div>
       </div>
       {blog && blog.parts &&
-        blog.parts.map((e) => {
-          return (
-            <>
-              <span>{e}</span>
-            </>
-          );
-        })}
+        blog.parts.map((e,idx) => (
+          <span key={idx}>{e}</span>
+        ))}
         <span>Learn - Grow - Share</span>
       <div className={styles.ending}>
         <div className={styles.posted}>
