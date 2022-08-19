@@ -70,7 +70,7 @@
   font-size: 2rem;
   margin: 10px 0px;
   font-weight: bold;
-  font-family: cursive;
+  font-family: monospace;
   color: wheat;
 }
 .circle > span:nth-child(2) {
@@ -100,7 +100,7 @@
   width: 90%;
 }
 .abtCompany span {
-  font-family: cursive;
+  font-family: monospace;
   text-align: center;
   letter-spacing: 1px;
   word-spacing: 2px;
