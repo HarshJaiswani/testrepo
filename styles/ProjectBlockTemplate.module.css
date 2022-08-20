@@ -38,6 +38,8 @@
   color: #a8b2d1;
 }
 .projectTech {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin: 10px 0px;
   color: #ccd6f683;
