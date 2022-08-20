@@ -49,15 +49,15 @@ const Projects = () => {
     "githubLink": "https://github.com/HarshJaiswani/LeGroSh-old",
     "liveLink": "https://harshjaiswani.github.io/LeGroSh-old/"
   }
-  // const project3 = {
-  //   "projectNum": "#03",
-  //   "projectName": "",
-  //   "imgUrl": "/Assets/project3.PNG",
-  //   "projectDescp": "",
-  //   "projectTech": ["", "", ""],
-  //   "githubLink": "",
-  //   "liveLink": ""
-  // }
+  const project3 = {
+    "projectNum": "#03",
+    "projectName": "Let's Talk - The Chat App",
+    "imgUrl": "/Assets/projects/project3.PNG",
+    "projectDescp": "A web app to faciliate chatting in group without logging In ! Create room and start talking !",
+    "projectTech": ["TailwindCss", "Socket.io", "Express","React","NodeJs"],
+    "githubLink": "https://github.com/HarshJaiswani/Let-s-Talk",
+    "liveLink": "https://lets-talk-chat-app.netlify.app/"
+  }
   return (
     <div className={styles.projects}>
       <Heading
@@ -71,12 +71,12 @@ const Projects = () => {
           <ProjectTemplate direction="right" getDetails={project1} />
         )}
         {show && project2 && <ProjectTemplate direction="left" getDetails={project2} />}
-        {/* {show && project3 && <ProjectTemplate direction="right" getDetails={project3} />} */}
+        {show && project3 && <ProjectTemplate direction="right" getDetails={project3} />}
         {!show && (
           <>
             <ProjectBlockTemplate getDetails={project1} />
             <ProjectBlockTemplate getDetails={project2} />
-            {/* <ProjectBlockTemplate getDetails={project3} />{" "} */}
+            <ProjectBlockTemplate getDetails={project3} />{" "}
           </>
         )}
       </div>
