@@ -11,20 +11,21 @@ const UtilityTemplate = (props) => {
           {props.getDetail.imgUrl != "" ? (
             <div className={styles.head}>
               <span className="bg-red-200/10">
-                <svg
+                {props.getDetail.toShow === "svg" && <svg
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
                   viewBox="0 0 16 16"
-                  height="2em"
-                  width="2em"
+                  height={props.getDetail.height}
+                  width={props.getDetail.width}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fill={props.getDetail.fill}
                     d={props.getDetail.imgUrl}
                   ></path>
-                </svg>
+                </svg>}
+                {props.getDetail.toShow === "img" && <img style={{width:props.getDetail.width,height:props.getDetail.height}} src={props.getDetail.imgUrl} alt="" />}
               </span>
             </div>
           ) : (
