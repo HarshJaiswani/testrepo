@@ -31,33 +31,33 @@ const Projects = () => {
     }
   }, [show, error, data]);
   const project1 = {
-    projectNum: "#01",
+    "projectNum": "#01",
+    "projectName": "",
+    "imgUrl": "/Assets/projects/project1.PNG",
+    "projectDescp": "KRYPT - A blockchain based system to transfer ETH !",
+    "projectTech": ["Vite", "HardHat", "Solidity" , "React" , "Goerli Testnet"],
+    "githubLink": "https://github.com/HarshJaiswani/krypt",
+    "liveLink": "https://lgs-krypt.netlify.app/"
+  }
+  const project2 = {
+    "projectNum": "#02",
+    "projectName": "Let's Talk - The Chat App",
+    "imgUrl": "/Assets/projects/project2.PNG",
+    "projectDescp": "A web app to faciliate chatting in group without logging In ! Create room and start talking !",
+    "projectTech": ["TailwindCss", "Socket.io", "Express","React","NodeJs"],
+    "githubLink": "https://github.com/HarshJaiswani/Let-s-Talk",
+    "liveLink": "https://lets-talk-chat-app.netlify.app/"
+  }
+  const project3 = {
+    projectNum: "#03",
     projectName: "Service Based Website",
-    imgUrl: "/Assets/projects/project1.PNG",
+    imgUrl: "/Assets/projects/project3.PNG",
     projectDescp:
       "This is the website for a legal or organisation firm to display their services and about them to get custmers online",
     projectTech: ["javascript", "html", "css"],
     githubLink: "https://github.com/HarshJaiswani/Service-Website",
     liveLink: "https://harshjaiswani.github.io/Service-Website/",
   };
-  const project2 = {
-    "projectNum": "#02",
-    "projectName": "LGS-Old",
-    "imgUrl": "/Assets/projects/project2.PNG",
-    "projectDescp": "This is the older version of the web app of LeGroSh",
-    "projectTech": ["ReactJs", "JavaScript", "Css" , "HTML"],
-    "githubLink": "https://github.com/HarshJaiswani/LeGroSh-old",
-    "liveLink": "https://harshjaiswani.github.io/LeGroSh-old/"
-  }
-  const project3 = {
-    "projectNum": "#03",
-    "projectName": "Let's Talk - The Chat App",
-    "imgUrl": "/Assets/projects/project3.PNG",
-    "projectDescp": "A web app to faciliate chatting in group without logging In ! Create room and start talking !",
-    "projectTech": ["TailwindCss", "Socket.io", "Express","React","NodeJs"],
-    "githubLink": "https://github.com/HarshJaiswani/Let-s-Talk",
-    "liveLink": "https://lets-talk-chat-app.netlify.app/"
-  }
   return (
     <div className={styles.projects}>
       <Heading
