@@ -26,7 +26,7 @@ const ProjectTemplate = (props) => {
             : { alignItems: "flex-end" }
         }
       >
-        <div className={styles.projectNum}>{props.getDetails.projectNum}</div>
+        <div className={styles.projectNum}>{props.getDetails.projectNum < 10 ? "#0" : "#"}{props.getDetails.projectNum}</div>
         <div className={styles.projectName}>
           <Link href={props.getDetails.liveLink}>
             <a>{props.getDetails.projectName}</a>

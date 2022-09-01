@@ -7,8 +7,8 @@ import styles from "../styles/Projects.module.css";
 import Footer from "../Components/Footer";
 
 const Projects = (props) => {
-  const [show, setShow] = useState();
   const [projects, setProjects] = useState(props.projects.data);
+  const [show, setShow] = useState();
   const [isOk, setIsOk] = useState("true");
   useEffect(() => {
     if (window.innerWidth <= 900) {
@@ -21,7 +21,7 @@ const Projects = (props) => {
     }
     if (projects) {
       setIsOk("true");
-      setProjects(projects.data);
+      setProjects(projects.sort((a, b) => b.projectNum - a.projectNum));
     }
   }, [projects]);
   return (
@@ -33,33 +33,41 @@ const Projects = (props) => {
         note="Aspiring to Build Great Things"
       />
       <div className={styles.projectWrapper}>
-        {show && (
-          <ProjectTemplate direction="right" getDetails={projects[projects.length - 1]} />
+        {show && projects[0] && (
+          <ProjectTemplate direction="right" getDetails={projects[0]} />
         )}
-        {show && project2 && <ProjectTemplate direction="left" getDetails={projects[projects.length - 2]} />}
-        {show && project3 && <ProjectTemplate direction="right" getDetails={projects[projects.length - 3]} />}
-        {!show && (
-          <>
-            <ProjectBlockTemplate getDetails={projects[projects.length - 1]} />
-            <ProjectBlockTemplate getDetails={projects[projects.length - 2]} />
-            <ProjectBlockTemplate getDetails={projects[projects.length - 3]} />{" "}
-          </>
+        {show && projects[1] && (
+          <ProjectTemplate direction="left" getDetails={projects[1]} />
+        )}
+        {show && projects[2] && (
+          <ProjectTemplate direction="right" getDetails={projects[2]} />
+        )}
+        {!show && projects[0] && (
+          <ProjectBlockTemplate getDetails={projects[0]} />
+        )}
+        {!show && projects[1] && (
+          <ProjectBlockTemplate getDetails={projects[1]} />
+        )}
+        {!show && projects[2] && (
+          <ProjectBlockTemplate getDetails={projects[2]} />
         )}
       </div>
-      {projects.length > 0 && show ? (
+      {projects.length > 3 && show ? (
         <h3 className={styles.heading2}>More Crazy Stuff</h3>
       ) : (
         ""
       )}
-      {projects.length > 0 && (
+      {projects.length > 3 && (
         <div className={styles.otherProjects}>
           {isOk == "true" &&
             projects &&
-            projects.splice(-3).map((k) => {
+            projects.map((k, index) => {
               return (
-                <>
-                  <ProjectBlockTemplate getDetails={k} />
-                </>
+                index != 0 &&
+                index != 1 &&
+                index != 2 && (
+                  <ProjectBlockTemplate getDetails={k} key={index} />
+                )
               );
             })}
         </div>
@@ -75,6 +83,6 @@ export async function getServerSideProps(context) {
   let data = await fetch(`https://legrosh.vercel.app/api/getProjects`);
   let projects = await data.json();
   return {
-    props: {projects}, // will be passed to the page component as props
-  }
+    props: { projects }, // will be passed to the page component as props
+  };
 }
