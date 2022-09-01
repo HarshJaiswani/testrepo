@@ -3,25 +3,26 @@ import ArticleBlockTemplate from '../Components/ArticleBlockTemplate'
 import Heading from '../Components/Heading'
 import Footer from '../Components/Footer'
 import styles from "../styles/Articles.module.css"
-import useSWR from "swr";
-const fetcher = (url) => fetch(url).then((res) => res.json());
+// import useSWR from "swr";
+// const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Articles = () => {
-  const { data, error } = useSWR("/api/getBlogs", fetcher);
-  const [articles, setArticles] = useState([]);
+const Articles = (props) => {
+  // const { data, error } = useSWR("/api/getBlogs", fetcher);
+  const [articles, setArticles] = useState(props.articles.data);
   const [isOk, setIsOk] = useState("true");
   useEffect(() => {
-    if (error) {
-      setIsOk("false");
-    }
-    if (!data) {
+    // if (error) {
+    //   setIsOk("false");
+    // }
+    if (!articles) {
       setIsOk("Loading...");
     }
-    if (data) {
+    if (articles) {
       setIsOk("true");
-      setArticles(data.data.sort((a,b) => a.sno - b.sno));
+      console.log(articles.sort((a,b) => a.sno - b.sno));
+      setArticles(articles.sort((a,b) => a.sno - b.sno));
     }
-  }, [error, data]);
+  }, [articles]);
   return (
     <div className={styles.articles}>
       <Heading name="The Essence of Learning" tagLine="The best way to experience other's life , Is to READ them" img="articles" note="I am a 18 years old boy, I am not someone the age of say 40+ or something so that , I could be able to share my experience but the day we are born we start experiencing and learning things. These artiles will act as a medium for me to share my journey , learning and specially my mistakes to try and help you perform a bit better in you life. Hope you will enjoy !" />
@@ -51,3 +52,11 @@ const Articles = () => {
 }
 
 export default Articles
+
+export async function getServerSideProps(context) {
+  let data = await fetch("https://legrosh.vercel.app/api/getBlogs");
+  let articles = await data.json();
+  return {
+    props: {articles}, // will be passed to the page component as props
+  }
+}

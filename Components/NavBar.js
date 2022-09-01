@@ -6,6 +6,8 @@ const NavBar = () => {
   return (
     <>
       <nav className={styles.nav}>
+        <Image src="/Assets/logo-white.png" alt="LeGroSh" width={170} height={60} />
+        <div className={styles.navLinks}>
         <Link href="/">
           <a>
             <span className={`${styles.navIcons}`}>
@@ -76,6 +78,7 @@ const NavBar = () => {
             </span>
           </a>
         </Link>
+        </div>
       </nav>
     </>
   );

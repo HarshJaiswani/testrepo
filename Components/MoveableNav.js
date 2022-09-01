@@ -12,14 +12,15 @@ const MoveableNav = () => {
   if (path == "/") path = "hash";
   return (
     <>
-      <div
+      <button
         className={styles.navClick}
         onClick={() => {
           show ? setShow(false) : setShow(true);
         }}
+        onBlur={() => setShow(false)}
       >
         <Image src={`/Assets/3d/nav.png`} alt="" priority="true" width={40} height={40} />
-      </div>
+      </button>
       <div className={styles.moveableNav}>
         <div
           style={
@@ -90,7 +91,7 @@ const MoveableNav = () => {
         >
           <Link href="/">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/hash.png" alt="" priority="true" width={40} height={40} />
+              <Image src="/Assets/logo.png" alt="" priority="true" width={42} height={41} />
             </a>
           </Link>
         </div>

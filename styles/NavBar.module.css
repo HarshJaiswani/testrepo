@@ -4,9 +4,14 @@
   height: fit-content;
   display: flex;
   z-index: 100;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background: transparent;
+}
+.navLinks{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .navIcons {
   display: flex;
@@ -15,8 +20,9 @@
   border-radius: 15px;
   padding: 3px 10px;
   background-color: #112240;
-  box-shadow: 0px 2px 7px black;
+  box-shadow: 0px 2px 6px #050d22;
   transition: all 0.4s;
+  margin: 0px 20px;
 }
 .navIcons span {
   margin: 0px 5px;
@@ -29,10 +35,14 @@
   cursor: pointer;
   transform: scale(0.95);
   transition: all 0.09s;
-  box-shadow: none;
+  /* box-shadow: none; */
 }
-@media screen and (max-width: 780px) {
-  .nav {
+@media screen and (max-width: 1140px) {
+  .navLinks {
     display: none;
+  }
+  .nav{
+    justify-content: center;
+    transform: scale(1.2);
   }
 }

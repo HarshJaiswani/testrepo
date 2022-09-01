@@ -1,32 +1,32 @@
-import React, { useEffect , useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Header.module.css";
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 import NavBar from "./NavBar";
-import useSWR from 'swr';
+import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Header = () => {
-  const { data, error } = useSWR('/api/getQuotes', fetcher);
-  const [quote , setQuote] = useState("");
+  const { data, error } = useSWR("/api/getQuotes", fetcher);
+  const [quote, setQuote] = useState("");
   useEffect(() => {
     if (error) {
       let obj = {
-        "text": "Learn - Grow - Share",
-        "author": "Harsh Jaiswani"
-      }
+        text: "Learn - Grow - Share",
+        author: "Harsh Jaiswani",
+      };
       setQuote(obj);
     }
     if (!data) {
       let obj = {
-        "text": "Loading...",
-        "author": ""
-      }
+        text: "Loading...",
+        author: "",
+      };
       setQuote(obj);
     }
     if (data) {
       setQuote(data);
     }
-  },[error , data])
+  }, [error, data]);
   return (
     <div className={styles.mainHead}>
       <NavBar />
