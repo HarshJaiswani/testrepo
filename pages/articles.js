@@ -10,6 +10,7 @@ const Articles = (props) => {
   // const { data, error } = useSWR("/api/getBlogs", fetcher);
   const [articles, setArticles] = useState(props.articles.data);
   const [isOk, setIsOk] = useState("true");
+  console.log(process.env.VERCEL_URL);
   useEffect(() => {
     // if (error) {
     //   setIsOk("false");
@@ -54,7 +55,7 @@ const Articles = (props) => {
 export default Articles
 
 export async function getServerSideProps(context) {
-  let data = await fetch("https://legrosh.vercel.app/api/getBlogs");
+  let data = await fetch(`${process.env.VERCEL_URL}/api/getBlogs`);
   let articles = await data.json();
   return {
     props: {articles}, // will be passed to the page component as props
