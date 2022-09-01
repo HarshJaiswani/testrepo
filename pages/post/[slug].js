@@ -5,31 +5,21 @@ import styles from "../../styles/post.module.css";
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 import { IoCopyOutline } from "react-icons/io5";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import useSWR from "swr";
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Post = () => {
-  const [blog, setBlog] = useState({});
+const Post = (props) => {
+  const [blog, setBlog] = useState(props.article);
   const [status, setStatus] = useState("true");
   //   const [postNo, setPostNo] = useState();
-  const router = useRouter();
-  const { slug } = router.query;
-  const { data, error } = useSWR(`/api/getBlog?slug=${slug}`, fetcher);
-
   useEffect(() => {
-    if(error){
-      setStatus("false");
-    }
-    if (!data) {
+    if (!blog) {
       setStatus("true");
     }
-    if(data){
-      setBlog(data);
+    if(blog){
+      setBlog(blog);
     }
-    }, [error , data]);
+    }, [blog]);
 //   const fetchBlog = async (no) => {
 //     if (postNo == 1) {
 //         toast('You are on first article!', {
@@ -182,3 +172,12 @@ const Post = () => {
 };
 
 export default Post;
+
+export async function getServerSideProps(context) {
+  let {slug} = context.query
+  let data = await fetch(`https://legrosh.vercel.app/api/getBlog?slug=${slug}`);
+  let article = await data.json();
+  return {
+    props: {article}, // will be passed to the page component as props
+  }
+}

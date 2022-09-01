@@ -1,0 +1,9 @@
+{
+  "projectNum": "#02",
+  "projectName": "Service Based Website",
+  "imgUrl": "/Assets/projects/project2.PNG",
+  "projectDescp": "This is the website for a legal or organisation firm to display their services and about them to get custmers online",
+  "projectTech": ["javascript", "html", "css"],
+  "githubLink": "https://github.com/HarshJaiswani/Service-Website",
+  "liveLink": "https://harshjaiswani.github.io/Service-Website/"
+}

@@ -2,26 +2,20 @@ import React , { useState , useEffect } from "react";
 import Heading from "../Components/Heading";
 import styles from "../styles/Games.module.css";
 import GameTemplate from "../Components/GameTemplate";
-import useSWR from "swr";
 import Footer from "../Components/Footer";
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Games = () => {
-  const { data, error } = useSWR("/api/getGames", fetcher);
-  const [games, setGames] = useState([]);
+const Games = (props) => {
+  const [games, setGames] = useState(props.games.data);
   const [isOk, setIsOk] = useState("true");
   useEffect(() => {
-    if (error) {
-      setIsOk("false");
-    }
-    if (!data) {
+    if (!games) {
       setIsOk("Loading...");
     }
-    if (data) {
+    if (games) {
       setIsOk("true");
-      setGames(data.data);
+      setGames(games);
     }
-  }, [error, data]);
+  }, [games]);
   return (
     <div className={styles.games}>
       <Heading
@@ -41,3 +35,11 @@ const Games = () => {
 };
 
 export default Games;
+
+export async function getServerSideProps(context) {
+  let data = await fetch(`https://legrosh.vercel.app/api/getGames`);
+  let games = await data.json();
+  return {
+    props: {games}, // will be passed to the page component as props
+  }
+}

@@ -3,26 +3,20 @@ import Heading from "../Components/Heading";
 import UtilityTemplate from "../Components/UtilityTemplate";
 import styles from "../styles/Utilities.module.css";
 import GameComp from "../Components/GameComp";
-import useSWR from "swr";
 import Footer from "../Components/Footer";
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Utilities = () => {
-  const { data, error } = useSWR("/api/getUtilities", fetcher);
-  const [utilities, setUtilities] = useState([]);
+const Utilities = (props) => {
+  const [utilities, setUtilities] = useState(props.utilities.data);
   const [isOk, setIsOk] = useState("true");
   useEffect(() => {
-    if (error) {
-      setIsOk("false");
-    }
-    if (!data) {
+    if (!utilities) {
       setIsOk("Loading...");
     }
-    if (data) {
+    if (utilities) {
       setIsOk("true");
-      setUtilities(data.data);
+      setUtilities(utilities);
     }
-  }, [error, data]);
+  }, [utilities]);
   return (
     <div className={styles.utilities}>
       <Heading
@@ -56,3 +50,11 @@ const Utilities = () => {
 };
 
 export default Utilities;
+
+export async function getServerSideProps(context) {
+  let data = await fetch(`https://legrosh.vercel.app/api/getUtilities`);
+  let utilities = await data.json();
+  return {
+    props: {utilities}, // will be passed to the page component as props
+  }
+}

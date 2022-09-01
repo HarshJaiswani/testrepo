@@ -1,0 +1,9 @@
+{
+  "projectNum": "#01",
+  "projectName": "LGS-Old",
+  "imgUrl": "/Assets/projects/project1.PNG",
+  "projectDescp": "This is the older version of the web app of LeGroSh",
+  "projectTech": ["ReactJs", "JavaScript", "Css", "HTML"],
+  "githubLink": "https://github.com/HarshJaiswani/LeGroSh-old",
+  "liveLink": "https://harshjaiswani.github.io/LeGroSh-old/"
+}

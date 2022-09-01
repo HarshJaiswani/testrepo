@@ -1,9 +1,9 @@
 {
   "projectNum": "#04",
-  "projectName": "LGS-Old",
+  "projectName": "KRYPT",
   "imgUrl": "/Assets/projects/project4.PNG",
-  "projectDescp": "This is the older version of the web app of LeGroSh",
-  "projectTech": ["ReactJs", "JavaScript", "Css", "HTML"],
-  "githubLink": "https://github.com/HarshJaiswani/LeGroSh-old",
-  "liveLink": "https://harshjaiswani.github.io/LeGroSh-old/"
+  "projectDescp": "KRYPT - A blockchain based system to transfer ETH !",
+  "projectTech": ["Vite", "HardHat", "Solidity", "React", "Goerli Testnet"],
+  "githubLink": "https://github.com/HarshJaiswani/krypt",
+  "liveLink": "https://lgs-krypt.netlify.app/"
 }

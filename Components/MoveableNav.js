@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "../styles/MoveableNav.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image"; 
+import Image from "next/image";
 
 const MoveableNav = () => {
   const [show, setShow] = useState(false);
@@ -15,11 +15,16 @@ const MoveableNav = () => {
       <button
         className={styles.navClick}
         onClick={() => {
-          show ? setShow(false) : setShow(true);
+          setShow(!show);
         }}
-        onBlur={() => setShow(false)}
       >
-        <Image src={`/Assets/3d/nav.png`} alt="" priority="true" width={40} height={40} />
+        <Image
+          src={`/Assets/3d/nav.png`}
+          alt=""
+          priority="true"
+          width={40}
+          height={40}
+        />
       </button>
       <div className={styles.moveableNav}>
         <div
@@ -33,7 +38,13 @@ const MoveableNav = () => {
         >
           <Link href="/projects">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/projects.png" alt="" priority="true" width={40} height={40} />
+              <Image
+                src="/Assets/3d/projects.png"
+                alt=""
+                priority="true"
+                width={40}
+                height={40}
+              />
             </a>
           </Link>
         </div>
@@ -48,7 +59,13 @@ const MoveableNav = () => {
         >
           <Link href="/utilities">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/utilities.png" alt="" priority="true" width={40} height={40} />
+              <Image
+                src="/Assets/3d/utilities.png"
+                alt=""
+                priority="true"
+                width={40}
+                height={40}
+              />
             </a>
           </Link>
         </div>
@@ -61,7 +78,13 @@ const MoveableNav = () => {
         >
           <Link href="/articles">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/articles.png" alt="" priority="true" width={40} height={40} />
+              <Image
+                src="/Assets/3d/articles.png"
+                alt=""
+                priority="true"
+                width={40}
+                height={40}
+              />
             </a>
           </Link>
         </div>
@@ -76,7 +99,13 @@ const MoveableNav = () => {
         >
           <Link href="/about">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/3d/about.png" alt="" priority="true" width={40} height={40} />
+              <Image
+                src="/Assets/3d/about.png"
+                alt=""
+                priority="true"
+                width={40}
+                height={40}
+              />
             </a>
           </Link>
         </div>
@@ -91,7 +120,13 @@ const MoveableNav = () => {
         >
           <Link href="/">
             <a onClick={() => setShow(false)}>
-              <Image src="/Assets/logo.png" alt="" priority="true" width={42} height={41} />
+              <Image
+                src="/Assets/logo.png"
+                alt=""
+                priority="true"
+                width={42}
+                height={41}
+              />
             </a>
           </Link>
         </div>

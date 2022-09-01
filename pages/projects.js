@@ -4,14 +4,11 @@ import Heading from "../Components/Heading";
 import ProjectBlockTemplate from "../Components/ProjectBlockTemplate";
 import ProjectTemplate from "../Components/ProjectTemplate";
 import styles from "../styles/Projects.module.css";
-import useSWR from "swr";
 import Footer from "../Components/Footer";
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Projects = () => {
+const Projects = (props) => {
   const [show, setShow] = useState();
-  const { data, error } = useSWR("/api/getProjects", fetcher);
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState(props.projects.data);
   const [isOk, setIsOk] = useState("true");
   useEffect(() => {
     if (window.innerWidth <= 900) {
@@ -19,45 +16,14 @@ const Projects = () => {
     } else {
       setShow(true);
     }
-    if (error) {
-      setIsOk("false");
-    }
-    if (!data) {
+    if (!projects) {
       setIsOk("Loading...");
     }
-    if (data) {
+    if (projects) {
       setIsOk("true");
-      setProjects(data.data);
+      setProjects(projects.data);
     }
-  }, [show, error, data]);
-  const project1 = {
-    "projectNum": "#01",
-    "projectName": "",
-    "imgUrl": "/Assets/projects/project1.PNG",
-    "projectDescp": "KRYPT - A blockchain based system to transfer ETH !",
-    "projectTech": ["Vite", "HardHat", "Solidity" , "React" , "Goerli Testnet"],
-    "githubLink": "https://github.com/HarshJaiswani/krypt",
-    "liveLink": "https://lgs-krypt.netlify.app/"
-  }
-  const project2 = {
-    "projectNum": "#02",
-    "projectName": "Let's Talk - The Chat App",
-    "imgUrl": "/Assets/projects/project2.PNG",
-    "projectDescp": "A web app to faciliate chatting in group without logging In ! Create room and start talking !",
-    "projectTech": ["TailwindCss", "Socket.io", "Express","React","NodeJs"],
-    "githubLink": "https://github.com/HarshJaiswani/Let-s-Talk",
-    "liveLink": "https://lets-talk-chat-app.netlify.app/"
-  }
-  const project3 = {
-    projectNum: "#03",
-    projectName: "Service Based Website",
-    imgUrl: "/Assets/projects/project3.PNG",
-    projectDescp:
-      "This is the website for a legal or organisation firm to display their services and about them to get custmers online",
-    projectTech: ["javascript", "html", "css"],
-    githubLink: "https://github.com/HarshJaiswani/Service-Website",
-    liveLink: "https://harshjaiswani.github.io/Service-Website/",
-  };
+  }, [projects]);
   return (
     <div className={styles.projects}>
       <Heading
@@ -67,16 +33,16 @@ const Projects = () => {
         note="Aspiring to Build Great Things"
       />
       <div className={styles.projectWrapper}>
-        {show && project1 && (
-          <ProjectTemplate direction="right" getDetails={project1} />
+        {show && (
+          <ProjectTemplate direction="right" getDetails={projects[projects.length - 1]} />
         )}
-        {show && project2 && <ProjectTemplate direction="left" getDetails={project2} />}
-        {show && project3 && <ProjectTemplate direction="right" getDetails={project3} />}
+        {show && project2 && <ProjectTemplate direction="left" getDetails={projects[projects.length - 2]} />}
+        {show && project3 && <ProjectTemplate direction="right" getDetails={projects[projects.length - 3]} />}
         {!show && (
           <>
-            <ProjectBlockTemplate getDetails={project1} />
-            <ProjectBlockTemplate getDetails={project2} />
-            <ProjectBlockTemplate getDetails={project3} />{" "}
+            <ProjectBlockTemplate getDetails={projects[projects.length - 1]} />
+            <ProjectBlockTemplate getDetails={projects[projects.length - 2]} />
+            <ProjectBlockTemplate getDetails={projects[projects.length - 3]} />{" "}
           </>
         )}
       </div>
@@ -89,7 +55,7 @@ const Projects = () => {
         <div className={styles.otherProjects}>
           {isOk == "true" &&
             projects &&
-            projects.map((k) => {
+            projects.splice(-3).map((k) => {
               return (
                 <>
                   <ProjectBlockTemplate getDetails={k} />
@@ -104,3 +70,11 @@ const Projects = () => {
 };
 
 export default Projects;
+
+export async function getServerSideProps(context) {
+  let data = await fetch(`https://legrosh.vercel.app/api/getProjects`);
+  let projects = await data.json();
+  return {
+    props: {projects}, // will be passed to the page component as props
+  }
+}
