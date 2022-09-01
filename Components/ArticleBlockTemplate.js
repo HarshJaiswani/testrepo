@@ -2,6 +2,8 @@ import React,{useState,useEffect} from "react";
 import styles from "../styles/ArticleBlockTemplate.module.css";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ArticleBlockTemplate = (props) => {
   const [count, setCount] = useState(0);
@@ -9,10 +11,11 @@ const ArticleBlockTemplate = (props) => {
     props.article.parts.forEach(element => {
       setCount(count + element.length);
     });
+    AOS.init();
   }, [])
   
   return (
-    <div className={styles.articleBlock} key={props.article.slug}>
+    <div className={styles.articleBlock} key={props.article.slug} data-aos={props.article.sno % 2 == 0 ? "fade-right":"fade-left"}>
       <div className={styles.articleDate}>
         {props.article.date} / {props.article.category}
       </div>

@@ -1,11 +1,17 @@
+import { useEffect } from "react";
 import styles from "../styles/NavBar.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const NavBar = () => {
+  useEffect(() => {
+    AOS.init();
+  })
   return (
     <>
-      <nav className={styles.nav}>
+      <nav className={styles.nav} data-aos="fade-down">
         <Image src="/Assets/logo-white.png" alt="LeGroSh" width={170} height={60} />
         <div className={styles.navLinks}>
         <Link href="/">

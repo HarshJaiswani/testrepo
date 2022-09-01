@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border-bottom: 1px solid white; */
 }
 .lgsgames h1{
     font-size: 4rem;
@@ -27,7 +28,7 @@
 .btn:hover{
     transform: scale(0.95);
 }
-.lgsgames::before{
+/* .lgsgames::before{
     content: '';
     position: absolute;
     top: 0px;
@@ -40,7 +41,7 @@
     background-repeat: no-repeat;
     background-size: 100% 50vh;
     opacity: 0.2;
-}
+} */
 @media screen and (max-width: 600px) {
     .lgsgames h1{
         font-size: 2rem;

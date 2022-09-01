@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/About.module.css";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { IoPersonCircle , IoLogoYoutube , IoLogoLinkedin } from "react-icons/io5";
@@ -7,6 +7,8 @@ import Heading from "../Components/Heading";
 import { TagCloud } from "react-tagcloud";
 import Footer from "../Components/Footer";
 import Link from "next/link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
   const data = [
@@ -20,6 +22,9 @@ const About = () => {
     { value: "NextJs", count: 20 },
     { value: "Mongoose", count: 20 },
   ];
+  useEffect(() => {
+    AOS.init();
+  })
   return (
     <>
       <div className={styles.about}>
@@ -57,7 +62,7 @@ const About = () => {
           </ul>
         </div>
         <div className={styles.team}>
-          <div className={styles.abtCircle}>
+          <div className={styles.abtCircle} data-aos="fade-right">
             <div className={styles.circle}>
               <span>Meet the Team</span>
               <span className={styles.teamDescp}>
@@ -68,7 +73,7 @@ const About = () => {
               </span>
             </div>
           </div>
-          <div className={styles.peoples}>
+          <div className={styles.peoples} data-aos="fade-left">
             <div className={styles.people}>
               <IoPersonCircle />
             </div>
@@ -99,10 +104,10 @@ const About = () => {
           </div>
         </div>
           <div className={styles.abtMe}>
-            <div>
+            <div data-aos="fade-right">
               <img src="/Assets/meGuitar.jpg" alt="" />
             </div>
-            <span>
+            <span data-aos="fade-left">
               <FaQuoteLeft className={styles.leftQuote} />
               <FaQuoteRight className={styles.rightQuote} />
               And This is me , Harsh Jaiswani , This is one of my oldest photo
@@ -120,7 +125,7 @@ const About = () => {
             </span>
           </div>
         <div className={styles.abtMeWrap}>
-          <div className={styles.mySkills}>
+          <div className={styles.mySkills} data-aos="fade-right">
             <div>
               Some of My Skills Inlcudes
             </div>
@@ -132,7 +137,7 @@ const About = () => {
               />
             </div>
           </div>
-        <div className={styles.history}>
+        <div className={styles.history} data-aos="fade-left">
           <div className={styles.historyHead}>My History</div>
           <section className={`text-gray-600 body-font ${styles.historySec}`}>
             <div className="container px-5 py-5 mx-auto flex flex-wrap">

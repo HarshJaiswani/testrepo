@@ -52,7 +52,7 @@ const Projects = (props) => {
           <ProjectBlockTemplate getDetails={projects[2]} />
         )}
       </div>
-      {projects.length > 3 && show ? (
+      {projects.length > 3 ? (
         <h3 className={styles.heading2}>More Crazy Stuff</h3>
       ) : (
         ""

@@ -1,8 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styles from "../styles/Ask.module.css";
 import Link from "next/link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Ask = () => {
+  useEffect(() => {
+    AOS.init();
+  })
   return (
     <section id={styles.ask}>
       <h1>Sharing the Learning</h1>
