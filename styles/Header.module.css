@@ -4,7 +4,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: -20;
+  /* z-index: -2; */
   background: rgb(9, 25, 33);
   background: linear-gradient(
     144deg,
@@ -28,6 +28,7 @@
   width: 100%;
   height: 90vh;
   display: flex;
+  /* z-index: -2; */
 }
 .headSide1,
 .headSide2 {

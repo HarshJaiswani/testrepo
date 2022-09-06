@@ -11,7 +11,7 @@ const NavBar = () => {
   })
   return (
     <>
-      <nav className={styles.nav} data-aos="fade-down">
+      <nav className={styles.nav}>
         <Image src="/Assets/logo-white.png" alt="LeGroSh" width={170} height={60} />
         <div className={styles.navLinks}>
         <Link href="/">

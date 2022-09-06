@@ -2,6 +2,7 @@
   padding-top: 80px;
   width: 100%;
   background-color: #050d22;
+  backdrop-filter: blur(1px);
 }
 #ask h1 {
   font-size: 2.7rem;

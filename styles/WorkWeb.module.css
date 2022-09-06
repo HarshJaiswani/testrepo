@@ -5,6 +5,7 @@
   width: 100%;
   min-height: 70vh;
   padding-top: 25px;
+  backdrop-filter: blur(1px);
   background-color: rgb(241, 241, 241);
 }
 .workwebbox {
