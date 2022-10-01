@@ -52,6 +52,7 @@ const MoveableNav = () => {
           width={40}
           height={40}
         />
+        <span>Navigation</span>
       </button>
       <div className={styles.moveableNav}>
         {navs.map((_nav, index) => (
@@ -62,13 +63,13 @@ const MoveableNav = () => {
                 ? {
                     transform: `translateY(${(index + 1) * 70}px)`,
                     boxShadow: "none",
-                    width: "50px",
-                    borderRadius: "50%",
+                    // width: "50px",
+                    // borderRadius: "50%",
                   }
                 : {
                     transform: "translateY(0px)",
-                    width: "150px",
-                    borderRadius: "50px",
+                    // width: "150px",
+                    // borderRadius: "50px",
                   }
             }
           >
@@ -98,118 +99,6 @@ const MoveableNav = () => {
             </Link>
           </div>
         ))}
-        {/* <div
-          style={
-            !show
-              ? {
-                  transform: "translateY(70px)",
-                  boxShadow: "none",
-                  width: "50px",
-                  borderRadius: "50%",
-                }
-              : {
-                  transform: "translateY(0px)",
-                  width: "fit-content",
-                  borderRadius: "10px",
-                }
-          }
-        >
-          <Link href="/utilities">
-            <a onClick={() => setShow(false)}>
-              <Image
-                src="/Assets/3d/utilities.png"
-                alt=""
-                priority="true"
-                width={40}
-                height={40}
-              />
-            </a>
-          </Link>
-        </div>
-        <div
-          style={
-            !show
-              ? {
-                  transform: "translateY(70px)",
-                  boxShadow: "none",
-                  width: "50px",
-                  borderRadius: "50%",
-                }
-              : {
-                  transform: "translateY(0px)",
-                  width: "fit-content",
-                  borderRadius: "10px",
-                }
-          }
-        >
-          <Link href="/articles">
-            <a onClick={() => setShow(false)}>
-              <Image
-                src="/Assets/3d/articles.png"
-                alt=""
-                priority="true"
-                width={40}
-                height={40}
-              />
-            </a>
-          </Link>
-        </div>
-        <div
-          style={
-            !show
-              ? {
-                  transform: "translateY(70px)",
-                  boxShadow: "none",
-                  width: "50px",
-                  borderRadius: "50%",
-                }
-              : {
-                  transform: "translateY(0px)",
-                  width: "fit-content",
-                  borderRadius: "10px",
-                }
-          }
-        >
-          <Link href="/about">
-            <a onClick={() => setShow(false)}>
-              <Image
-                src="/Assets/3d/about.png"
-                alt=""
-                priority="true"
-                width={40}
-                height={40}
-              />
-            </a>
-          </Link>
-        </div>
-        <div
-          style={
-            !show
-              ? {
-                  transform: "translateY(70px)",
-                  boxShadow: "none",
-                  width: "50px",
-                  borderRadius: "50%",
-                }
-              : {
-                  transform: "translateY(0px)",
-                  width: "fit-content",
-                  borderRadius: "10px",
-                }
-          }
-        >
-          <Link href="/">
-            <a onClick={() => setShow(false)}>
-              <Image
-                src="/Assets/logo.png"
-                alt=""
-                priority="true"
-                width={42}
-                height={41}
-              />
-            </a>
-          </Link>
-        </div> */}
       </div>
     </>
   );
