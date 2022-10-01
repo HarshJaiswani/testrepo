@@ -10,6 +10,33 @@ const MoveableNav = () => {
   const router = useRouter();
   let path = router.pathname;
   if (path == "/") path = "hash";
+  const navs = [
+    {
+      name: "Projects",
+      href: "/projects",
+      img: "/Assets/3d/projects.png",
+    },
+    {
+      name: "Utilities",
+      href: "/utilities",
+      img: "/Assets/3d/utilities.png",
+    },
+    {
+      name: "Articles",
+      href: "/articles",
+      img: "/Assets/3d/articles.png",
+    },
+    {
+      name: "About Us",
+      href: "/about",
+      img: "/Assets/3d/about.png",
+    },
+    {
+      name: "Home",
+      href: "/",
+      img: "/Assets/logo.png",
+    },
+  ];
   return (
     <>
       <button
@@ -27,33 +54,63 @@ const MoveableNav = () => {
         />
       </button>
       <div className={styles.moveableNav}>
-        <div
+        {navs.map((_nav, index) => (
+          <div
+            key={index}
+            style={
+              !show
+                ? {
+                    transform: `translateY(${(index + 1) * 70}px)`,
+                    boxShadow: "none",
+                    width: "50px",
+                    borderRadius: "50%",
+                  }
+                : {
+                    transform: "translateY(0px)",
+                    width: "150px",
+                    borderRadius: "50px",
+                  }
+            }
+          >
+            <Link href={_nav.href}>
+              <a onClick={() => setShow(false)}>
+                <Image
+                  src={_nav.img}
+                  alt=""
+                  priority="true"
+                  width={40}
+                  height={40}
+                />
+                <span
+                  style={
+                    show
+                      ? {
+                          display: "inline-block",
+                        }
+                      : {
+                          display: "none",
+                        }
+                  }
+                >
+                  {_nav.name}
+                </span>
+              </a>
+            </Link>
+          </div>
+        ))}
+        {/* <div
           style={
             !show
-              ? { transform: "translateY(70px)", boxShadow: "none" }
-              : {
-                  transform: "translateY(0px)",
+              ? {
+                  transform: "translateY(70px)",
+                  boxShadow: "none",
+                  width: "50px",
+                  borderRadius: "50%",
                 }
-          }
-        >
-          <Link href="/projects">
-            <a onClick={() => setShow(false)}>
-              <Image
-                src="/Assets/3d/projects.png"
-                alt=""
-                priority="true"
-                width={40}
-                height={40}
-              />
-            </a>
-          </Link>
-        </div>
-        <div
-          style={
-            !show
-              ? { transform: "translateY(140px)", boxShadow: "none" }
               : {
                   transform: "translateY(0px)",
+                  width: "fit-content",
+                  borderRadius: "10px",
                 }
           }
         >
@@ -72,8 +129,17 @@ const MoveableNav = () => {
         <div
           style={
             !show
-              ? { transform: "translateY(210px)", boxShadow: "none" }
-              : { transform: "translateY(0px)" }
+              ? {
+                  transform: "translateY(70px)",
+                  boxShadow: "none",
+                  width: "50px",
+                  borderRadius: "50%",
+                }
+              : {
+                  transform: "translateY(0px)",
+                  width: "fit-content",
+                  borderRadius: "10px",
+                }
           }
         >
           <Link href="/articles">
@@ -91,9 +157,16 @@ const MoveableNav = () => {
         <div
           style={
             !show
-              ? { transform: "translateY(280px)", boxShadow: "none" }
+              ? {
+                  transform: "translateY(70px)",
+                  boxShadow: "none",
+                  width: "50px",
+                  borderRadius: "50%",
+                }
               : {
                   transform: "translateY(0px)",
+                  width: "fit-content",
+                  borderRadius: "10px",
                 }
           }
         >
@@ -112,9 +185,16 @@ const MoveableNav = () => {
         <div
           style={
             !show
-              ? { transform: "translateY(350px)", boxShadow: "none" }
+              ? {
+                  transform: "translateY(70px)",
+                  boxShadow: "none",
+                  width: "50px",
+                  borderRadius: "50%",
+                }
               : {
                   transform: "translateY(0px)",
+                  width: "fit-content",
+                  borderRadius: "10px",
                 }
           }
         >
@@ -129,7 +209,7 @@ const MoveableNav = () => {
               />
             </a>
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   );
