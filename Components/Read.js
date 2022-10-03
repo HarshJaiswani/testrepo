@@ -1,27 +1,24 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Read.module.css";
 import ArticleBlockTemplate from "../Components/ArticleBlockTemplate";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import useSWR from "swr";
-const fetcher = (url) => fetch(url).then((res) => res.json());
+import AOS from "aos";
+import "aos/dist/aos.css";
+// import useSWR from "swr";
+// const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Read = () => {
-  const { data, error } = useSWR("/api/getBlogs", fetcher);
-  const [articles, setArticles] = useState([]);
+const Read = (props) => {
+  console.log(props.articles);
+  // const { data, error } = useSWR("/api/getBlogs", fetcher);
+  const [articles, setArticles] = useState(props.articles);
   const [isOk, setIsOk] = useState("true");
   useEffect(() => {
-    if (error) {
-      setIsOk("false");
-    }
-    if (!data) {
-      setIsOk("true");
-    }
-    if (data) {
-      setArticles(data.data.sort((a, b) => a.sno - b.sno).slice(0, 6));
+    if (articles) {
+      setIsOk(true);
+    } else {
+      setIsOk("Loading...");
     }
     AOS.init();
-  }, [error, data]);
+  }, []);
   return (
     <div className={styles.read}>
       <div className={styles.head} data-aos="fade-down">
