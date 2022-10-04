@@ -7,9 +7,8 @@ import "aos/dist/aos.css";
 // const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Read = (props) => {
-  console.log(props.articles);
+  const { articles } = props;
   // const { data, error } = useSWR("/api/getBlogs", fetcher);
-  const [articles, setArticles] = useState(props.articles);
   const [isOk, setIsOk] = useState("true");
   useEffect(() => {
     if (articles) {

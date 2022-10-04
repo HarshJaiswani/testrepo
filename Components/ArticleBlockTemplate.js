@@ -17,7 +17,7 @@ const ArticleBlockTemplate = (props) => {
       </div>
       <div className={styles.articleTitle}>{article.title}</div>
       <div className={styles.articleDescp}>{article.description}...</div>
-      <div className="text-gray-400 font-semibold text-sm tracking-wider">
+      <div className="text-gray-400 my-2 font-semibold text-sm tracking-wider">
         Minutes Read -{" "}
         <b className="mr-2 text-white">{(totalLength / 300).toFixed(2)}</b>
       </div>
