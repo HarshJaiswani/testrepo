@@ -12,7 +12,7 @@
   width: 50%;
   height: 100%;
 }
-.contact{
+.contact {
   width: 100%;
   text-align: center;
   padding: 10px 0px;
@@ -21,11 +21,11 @@
   /* font-family: cursive; */
   letter-spacing: 1px;
 }
-.contact > a{
+.contact > a {
   margin: 0px 20px;
   color: orange;
 }
-.contact > a:hover{
+.contact > a:hover {
   color: rgba(255, 166, 0, 0.644);
 }
 .peoples {
@@ -146,6 +146,7 @@
 .abtMe div img {
   width: 70%;
   border-radius: 10px;
+  /* border: 1px solid green; */
   box-shadow: 0px 20px 30px -15px green;
 }
 .abtMe span {
@@ -160,8 +161,8 @@
   justify-content: center;
   align-items: center;
   letter-spacing: 1px;
-  text-align: center;
-  word-spacing: 2px;
+  text-align: justify;
+  /* word-spacing: 2px; */
   color: whitesmoke;
 }
 .leftQuote {
