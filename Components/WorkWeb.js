@@ -1,17 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-import React , {useEffect} from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/WorkWeb.module.css";
 import Link from "next/link";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WorkWeb = () => {
   useEffect(() => {
     AOS.init();
-  })
+  });
   return (
     <div id={styles.workweb}>
-      <div className={styles.workwebbox} data-aos="fade-right">
+      <div className={styles.workwebbox}>
         <div className={styles.workwebhead}>Work With Us</div>
         <div className={styles.workwebbody}>
           <img

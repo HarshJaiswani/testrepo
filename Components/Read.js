@@ -20,7 +20,7 @@ const Read = (props) => {
   }, []);
   return (
     <div className={styles.read}>
-      <div className={styles.head} data-aos="fade-down">
+      <div className={styles.head}>
         <h1>Application of Knowledge is Power</h1>
         <p>
           You can learn anytime anywhere on your fingertips by reading the

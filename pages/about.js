@@ -70,7 +70,7 @@ const About = () => {
           </ul>
         </div>
         <div className={styles.team}>
-          <div className={styles.abtCircle} data-aos="fade-right">
+          <div className={styles.abtCircle}>
             <div className={styles.circle}>
               <span>Meet the Team</span>
               <span className={styles.teamDescp}>
@@ -85,7 +85,7 @@ const About = () => {
               </span>
             </div>
           </div>
-          <div className={styles.peoples} data-aos="fade-left">
+          <div className={styles.peoples}>
             <div className={styles.people}>
               <IoPersonCircle />
             </div>
@@ -116,10 +116,10 @@ const About = () => {
           </div>
         </div>
         <div className={styles.abtMe}>
-          <div data-aos="fade-right">
+          <div>
             <img src="/Assets/meGuitar.jpg" alt="" />
           </div>
-          <span data-aos="fade-left">
+          <span>
             <FaQuoteLeft className={styles.leftQuote} />
             <FaQuoteRight className={styles.rightQuote} />
             And This is me, Harsh Jaiswani, This is one of my oldest photo of
@@ -145,13 +145,13 @@ const About = () => {
           </span>
         </div>
         <div className={styles.abtMeWrap}>
-          <div className={styles.mySkills} data-aos="fade-right">
+          <div className={styles.mySkills}>
             <div>Some of My Skills Inlcudes</div>
             <div>
               <TagCloud minSize={12} maxSize={35} tags={data} />
             </div>
           </div>
-          <div className={styles.history} data-aos="fade-left">
+          <div className={styles.history}>
             <div className={styles.historyHead}>My History</div>
             <section className={`text-gray-600 body-font ${styles.historySec}`}>
               <div className="container px-5 py-5 mx-auto flex flex-wrap">
