@@ -41,7 +41,7 @@ const WorkWeb = () => {
           </a>
         </Link>
       </div>
-      <div className={styles.workwebbox} data-aos="fade-left">
+      <div className={styles.workwebbox}>
         <div className={styles.workwebhead}>Get Your Website</div>
         <div className={styles.workwebbody}>
           <img

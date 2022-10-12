@@ -41,7 +41,7 @@ const QR = () => {
         <div className={styles.qrWrap}>
           <img src="/Assets/qrCode.png" alt="qrCode" />
         </div>
-        <div data-aos="fade-left">
+        <div>
           <h3>Share It</h3>
           <p>
             If you feel like this thing could help someone or just wanna show
