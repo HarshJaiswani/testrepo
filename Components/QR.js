@@ -4,8 +4,8 @@ import styles from "../styles/QR.module.css";
 import { IoCopyOutline } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const QR = () => {
   useEffect(() => {
