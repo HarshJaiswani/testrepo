@@ -6,9 +6,9 @@ import Link from "next/link";
 // import "aos/dist/aos.css";
 
 const WorkWeb = () => {
-  useEffect(() => {
-    AOS.init();
-  });
+  // useEffect(() => {
+  //   AOS.init();
+  // });
   return (
     <div id={styles.workweb}>
       <div className={styles.workwebbox}>

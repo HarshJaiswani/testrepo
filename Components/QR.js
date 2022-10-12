@@ -8,9 +8,9 @@ import "react-toastify/dist/ReactToastify.css";
 // import "aos/dist/aos.css";
 
 const QR = () => {
-  useEffect(() => {
-    AOS.init();
-  });
+  // useEffect(() => {
+  //   AOS.init();
+  // });
   const copyFunc = () => {
     navigator.clipboard.writeText(window.location.href);
     toast.success("Link Copied!", {
